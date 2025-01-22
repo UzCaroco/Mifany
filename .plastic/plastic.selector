@@ -1,0 +1,4 @@
+repository "Teste Musica@Uz_Caroco@cloud"
+  path "/"
+    br "/main"
+    co "/main"
