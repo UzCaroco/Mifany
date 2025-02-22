@@ -46,8 +46,6 @@ public class music : MonoBehaviour
         Debug.Log("Ativou");
         Queue<float> fila = new Queue<float>();
 
-        
-
         for (int i = 0; i < tons.Length - 1; i++)
         {
             fila.Enqueue(tons[i + 1] - tons[i]); // Calcula o tempo de diferença entre os tons
