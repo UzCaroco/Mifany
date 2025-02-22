@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class music : MonoBehaviour
 {
+    [SerializeField] float[] tons1 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
+    [SerializeField] float[] tons2 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
+    [SerializeField] float[] tons3 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
 
     public GameObject prefabNota;
     bool momentoPERFEITO, momentoOK;
@@ -31,9 +34,22 @@ public class music : MonoBehaviour
 
     void TonsDaMusica()
     {
-        float[] tom = new float[] { 0, 4, 8, 10, 12, 13, 14, 18};
+        
 
-        CalcularEspacoEntreNotas(tom);
+        if (PlayerPrefs.GetInt("FaseAtual") == 1)
+        {
+            CalcularEspacoEntreNotas(tons1);
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+        {
+            CalcularEspacoEntreNotas(tons2);
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+        {
+            CalcularEspacoEntreNotas(tons3);
+        }
+
+
     }
 
     
@@ -85,15 +101,6 @@ public class music : MonoBehaviour
             intervalos.Dequeue();
         }
 
-
-        
-
-
-
-
-
-
-
         
     }
 
@@ -103,7 +110,7 @@ public class music : MonoBehaviour
     {
 
 
-        GameObject instancia = Instantiate(prefabNota, new Vector3(-6, 0, 0), Quaternion.identity);
+        GameObject instancia = Instantiate(prefabNota, new Vector3(-6f, 3.5f, 0f), Quaternion.identity);
 
         NotaMusical scriptNota = instancia.GetComponent<NotaMusical>();
         scriptNota.velocidade = vel;
