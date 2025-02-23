@@ -17,7 +17,7 @@ public class NotaMusical : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("boa");
-        }*/
+        }
 
         if (transform.position.x >= 3.3 && transform.position.x <= 4.3 && clique)
         {
@@ -37,6 +37,6 @@ public class NotaMusical : MonoBehaviour
         else if (transform.position.x > 7.67)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 }
