@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             player = this;
             DontDestroyOnLoad(gameObject);
 
-            PlayerPrefs.SetInt("FaseAtual", 3);
+            PlayerPrefs.SetInt("FaseAtual", 1);
         }
         else
         {
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Enemy") || other.CompareTag("Wall"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }

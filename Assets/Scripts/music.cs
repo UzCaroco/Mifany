@@ -8,6 +8,12 @@ public class music : MonoBehaviour
     [SerializeField] float[] tons2 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
     [SerializeField] float[] tons3 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
 
+    [SerializeField] Sprite[] spritesVermelhos = new Sprite[5];
+    [SerializeField] Sprite[] spritesAmarelos = new Sprite[5];
+    [SerializeField] Sprite[] spritesAzuis = new Sprite[5];
+
+    [SerializeField] float posicaoInicial, posicaoFinal;
+
     public GameObject prefabNota;
     bool momentoPERFEITO, momentoOK;
 
@@ -19,18 +25,6 @@ public class music : MonoBehaviour
         TonsDaMusica();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (momentoPERFEITO && Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Clique Perfeito");
-        }
-        else if (momentoOK && Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("Clique OK");
-        }
-    }
 
     void TonsDaMusica()
     {
@@ -65,43 +59,28 @@ public class music : MonoBehaviour
         for (int i = 0; i < tons.Length - 1; i++)
         {
             fila.Enqueue(tons[i + 1] - tons[i]); // Calcula o tempo de diferença entre os tons
-            Debug.Log(fila.Peek());
         }
-        Debug.Log("Ativou" + fila.Peek());
         
         StartCoroutine(CalcularVelocidadeDasNotas(fila));
-
-
-
-
-
-
-
     }
+
+
+
+    [SerializeField] float tempoDeViagem = 2f; // Tempo em segundos para chegar ao destino
 
     IEnumerator CalcularVelocidadeDasNotas(Queue<float> intervalos)
     {
-        Debug.Log("Ativou CERTAMENTE");
-
-        
-
-        for (int i = 0; i < intervalos.Count; i++)
+        while (intervalos.Count > 0)
         {
-            i = 0;
-            float vel = 11.8f / intervalos.Peek();
-            Debug.Log("velocidade:");
-            Debug.Log(vel);
+            // Calcula velocidade baseada no tempo fixo de viagem
+            float distancia = posicaoFinal - posicaoInicial;
+            float vel = distancia / tempoDeViagem;
 
             InstanciarNota(vel);
-            //StartCoroutine(TempoDeCliqueOK(intervalos.Peek()));
-            //StartCoroutine(TempoDeCliquePERFEITO(intervalos.Peek()));
-            //StartCoroutine(BloquearClique(intervalos.Peek()));
 
-            yield return new WaitForSeconds(intervalos.Peek());
-            intervalos.Dequeue();
+            // Espera o intervalo definido entre as notas
+            yield return new WaitForSecondsRealtime(intervalos.Dequeue());
         }
-
-        
     }
 
 
@@ -110,35 +89,32 @@ public class music : MonoBehaviour
     {
 
 
-        GameObject instancia = Instantiate(prefabNota, new Vector3(-6f, 3.5f, 0f), Quaternion.identity);
+        GameObject instancia = Instantiate(prefabNota, new Vector3(posicaoInicial, 3.5f, 0f), Quaternion.identity);
 
+        int nota = Random.Range(0, 5);
+
+        SpriteRenderer spriteRend = instancia.GetComponent<SpriteRenderer>();
+        spriteRend.sprite = ResultadoSorteio(nota);
         NotaMusical scriptNota = instancia.GetComponent<NotaMusical>();
         scriptNota.velocidade = vel;
     }
 
-
-
-
-
-
-    /*IEnumerator TempoDeCliqueOK(float interval)
+    Sprite ResultadoSorteio(int x)
     {
-        yield return new WaitForSeconds(interval * 95/100);
-        momentoOK = true;
-        Debug.Log("Clique Agora OK");
+        if (PlayerPrefs.GetInt("FaseAtual") == 1)
+        {
+            return spritesAmarelos[x];
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+        {
+            return spritesAzuis[x]; 
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+        {
+            return spritesVermelhos[x];
+        }
+
+        return null;
     }
-    IEnumerator TempoDeCliquePERFEITO(float interval)
-    {
-        yield return new WaitForSeconds(interval * 99.5f/100);
-        momentoPERFEITO = true;
-        Debug.Log("Clique Agora PERFEITO");
-    }
-    IEnumerator BloquearClique(float interval)
-    {
-        yield return new WaitForSeconds(interval * 100.5f/100);
-        momentoPERFEITO = false;
-        momentoOK = false;
-        Debug.Log("Não Pode Mais Clicar");
-    }*/
 
 }

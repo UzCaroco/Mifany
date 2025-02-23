@@ -9,31 +9,32 @@ public class NotaMusical : MonoBehaviour
 
     bool clique => Input.GetKeyDown(KeyCode.Space);
 
-    private void Start()
-    {
-        transform.position = new Vector2(-6, 3.5f);
-    }
-
     void Update()
     {
-        transform.position = new Vector3(velocidade * Time.fixedDeltaTime + transform.position.x, 0, 0);
+        transform.Translate(Vector3.right * velocidade * Time.deltaTime);
 
-        if (transform.position.x > 5.5 && transform.position.x <= 6 && clique)
+        /*if (transform.position.x > 3.8)
+        {
+            Destroy(gameObject);
+            Debug.Log("boa");
+        }*/
+
+        if (transform.position.x >= 3.3 && transform.position.x <= 4.3 && clique)
         {
             Destroy(gameObject);
             Debug.Log("PERFEITO");
         }
-        else if (transform.position.x > 5 && transform.position.x <= 5.5 && clique)
+        else if (transform.position.x >= 1.8 && transform.position.x <= 5.8 && clique)
         {
             Destroy(gameObject);
             Debug.Log("OK");
         }
-        else if (transform.position.x <= 5 && clique)
+        else if ((transform.position.x < 1.8 || transform.position.x > 5.8) && clique)
         {
             Destroy(gameObject);
             Debug.Log("ERROU");
         }
-        else if (transform.position.x > 6)
+        else if (transform.position.x > 7.67)
         {
             Destroy(gameObject);
         }
