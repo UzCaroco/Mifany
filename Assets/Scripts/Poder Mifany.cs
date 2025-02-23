@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PoderMifany : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float velocidade = 30f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.right * velocidade * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Boss"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

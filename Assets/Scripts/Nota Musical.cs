@@ -7,8 +7,6 @@ public class NotaMusical : MonoBehaviour
 
     public float velocidade;
 
-    bool clique => Input.GetKeyDown(KeyCode.Space);
-
     void Update()
     {
         transform.Translate(Vector3.right * velocidade * Time.deltaTime);
@@ -17,9 +15,9 @@ public class NotaMusical : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("boa");
-        }
+        }*/
 
-        if (transform.position.x >= 3.3 && transform.position.x <= 4.3 && clique)
+        /*if (transform.position.x >= 3.3 && transform.position.x <= 4.3 && clique)
         {
             Destroy(gameObject);
             Debug.Log("PERFEITO");

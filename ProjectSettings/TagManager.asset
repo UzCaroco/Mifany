@@ -9,6 +9,7 @@ TagManager:
   - Solo
   - Paisagem
   - Ceu
+  - Boss
   layers:
   - Default
   - TransparentFX
