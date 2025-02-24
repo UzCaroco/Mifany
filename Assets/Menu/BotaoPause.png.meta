@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615b87a807ff9ab49b30c72cbb420334
+guid: bb7c6d97e5eff734faabe308233449c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,11 +123,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BotaoConfiguracao_0
+      name: BotaoPause_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
+        y: 4
         width: 482
         height: 416
       alignment: 0
@@ -137,17 +137,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcb2c1e6870ac4f4da6f699b4a7d79a1
-      internalID: 1278401418
+      spriteID: 30369cdadd68b9940aa76aba2a0c75c1
+      internalID: -1475473720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BotaoConfiguracao_1
+      name: BotaoPause_1
       rect:
         serializedVersion: 2
-        x: 538
+        x: 526
         y: 0
         width: 482
         height: 416
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e5359bc4a060146ac9ea160500b402
-      internalID: 1387777894
+      spriteID: 87f9e796fb7c20d4e81c2379ffb62464
+      internalID: 1864916366
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BotaoConfiguracao_0: 1278401418
-      BotaoConfiguracao_1: 1387777894
+      BotaoPause_0: -1475473720
+      BotaoPause_1: 1864916366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

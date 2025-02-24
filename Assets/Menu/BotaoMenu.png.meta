@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615b87a807ff9ab49b30c72cbb420334
+guid: cdb9d7682e4843540a478a59edda42af
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,31 +123,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BotaoConfiguracao_0
+      name: BotaoMenu_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
-        width: 482
-        height: 416
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcb2c1e6870ac4f4da6f699b4a7d79a1
-      internalID: 1278401418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BotaoConfiguracao_1
-      rect:
-        serializedVersion: 2
-        x: 538
         y: 0
         width: 482
         height: 416
@@ -158,8 +137,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e5359bc4a060146ac9ea160500b402
-      internalID: 1387777894
+      spriteID: 9cf76e44b16a8bf45a52b686aa4b4e16
+      internalID: 1185479421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotaoMenu_1
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 0
+        width: 482
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac4e10a6af563848bd4ac457d9ae719
+      internalID: 274907549
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BotaoConfiguracao_0: 1278401418
-      BotaoConfiguracao_1: 1387777894
+      BotaoMenu_0: 1185479421
+      BotaoMenu_1: 274907549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
