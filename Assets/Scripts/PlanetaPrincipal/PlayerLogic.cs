@@ -7,6 +7,7 @@ public class PlayerLogic : MonoBehaviour
     float dirX = 0;
 
     [SerializeField] float speed;
+    [SerializeField] Camera cam;
 
     Rigidbody2D rb;
     Animator animPlayer;
@@ -20,6 +21,12 @@ public class PlayerLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cam.transform.position = new Vector3(transform.position.x, 0 , -10);
+        
+    }
+
+    private void FixedUpdate()
+    {
         MoveHorizontal();
     }
     void MoveHorizontal()
@@ -28,7 +35,7 @@ public class PlayerLogic : MonoBehaviour
 
         if (dirX != 0)
         {
-            rb.velocity = new Vector2((dirX * speed) * Time.deltaTime, rb.velocity.y);
+            rb.velocity = new Vector2((dirX * speed) * Time.fixedDeltaTime, rb.velocity.y);
             animPlayer.SetBool("isWalking",true);
         }
         else
