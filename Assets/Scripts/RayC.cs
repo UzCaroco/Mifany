@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class RayC : MonoBehaviour
@@ -11,14 +12,21 @@ public class RayC : MonoBehaviour
 
     [SerializeField] music ScriptMusic;
     [SerializeField] Slider sliderBoss, sliderPlayer;
+    [SerializeField] AudioSource audioSource;
+
     float danoBom, danoPerfeito, danoBoss;
 
     float[] totalDeNotas = new float[3];
+    short totalDeAcertos = 0;
+
+    bool jogando = false;
 
     void Start()
     {
         Debug.DrawRay(transform.position, Vector2.left * 19, Color.green);
         Debug.Log(PlayerPrefs.GetInt("FaseAtual"));
+
+        jogando = true;
 
         totalDeNotas[0] = ScriptMusic.tons1.Length;
         totalDeNotas[1] = ScriptMusic.tons2.Length;
@@ -54,6 +62,12 @@ public class RayC : MonoBehaviour
 
     void Update()
     {
+        if (!audioSource.isPlaying && jogando)
+        {
+            jogando = false;
+            SceneManager.LoadScene(0);
+        }
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 20f, layer);
 
         if (Input.GetKeyDown(KeyCode.Space) && hit.collider != null)
@@ -63,6 +77,7 @@ public class RayC : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 Debug.Log("PERFEITO");
 
+                totalDeAcertos++;
                 sliderBoss.value -= danoPerfeito;
 
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
@@ -86,12 +101,11 @@ public class RayC : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 Debug.Log("OK");
 
+                totalDeAcertos++;
                 sliderBoss.value -= danoBom;
 
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
-
-                Debug.Log(img);
 
                 if (PlayerPrefs.GetInt("FaseAtual") == 1)
                 {
@@ -115,8 +129,6 @@ public class RayC : MonoBehaviour
 
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
-
-                Debug.Log(img);
 
                 if (PlayerPrefs.GetInt("FaseAtual") == 1)
                 {
