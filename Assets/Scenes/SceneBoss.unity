@@ -1869,7 +1869,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   poderMifany: {fileID: 2897499686553746281, guid: 435e16ff38fe17c4b95f95138304e063, type: 3}
-  poderInimigo: {fileID: 0}
+  poderInimigo: {fileID: 5349457757140245494, guid: 07043a71c2ea1b7479cd6b3191246183, type: 3}
   spritesPoder:
   - {fileID: 21300000, guid: a533f8bec6754ce4fa0ec622109ff6e4, type: 3}
   - {fileID: 21300000, guid: dbb77b7e412f99344ab0290c234a3f9a, type: 3}
@@ -1975,7 +1975,7 @@ GameObject:
   - component: {fileID: 1775745005}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2024,9 +2024,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13465968, y: 0.13857767}
-  m_Size: {x: 1.2652037, y: 0.47111833}
-  m_Direction: 1
+  m_Offset: {x: 0.16508222, y: 1.6444876}
+  m_Size: {x: 1.8097157, y: 3.4829526}
+  m_Direction: 0
 --- !u!50 &1775745007
 Rigidbody2D:
   serializedVersion: 4
