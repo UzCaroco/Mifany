@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     void MudarMateriais()
     {
         Debug.Log(quads[0].name);
+
         if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
             quads[0].material = materials[2];

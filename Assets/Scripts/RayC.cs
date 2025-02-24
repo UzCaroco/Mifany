@@ -27,6 +27,8 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
+                Debug.Log(img);
+
                 if (PlayerPrefs.GetInt("FaseInicial") == 1)
                 {
                     img.sprite = spritesPoder[0];
@@ -48,6 +50,8 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
+                Debug.Log(img);
+
                 if (PlayerPrefs.GetInt("FaseInicial") == 1)
                 {
                     img.sprite = spritesPoder[3];
@@ -66,7 +70,23 @@ public class RayC : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 Debug.Log("ERROU");
 
-                
+                GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
+                SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
+
+                Debug.Log(img);
+
+                if (PlayerPrefs.GetInt("FaseInicial") == 1)
+                {
+                    img.sprite = spritesPoder[3];
+                }
+                else if (PlayerPrefs.GetInt("FaseInicial") == 2)
+                {
+                    img.sprite = spritesPoder[3];
+                }
+                else if (PlayerPrefs.GetInt("FaseInicial") == 3)
+                {
+                    img.sprite = spritesPoder[3];
+                }
             }
             else if (hit.transform.position.x > 7.67)
             {
