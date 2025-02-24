@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RayC : MonoBehaviour
 {
@@ -8,10 +9,47 @@ public class RayC : MonoBehaviour
     [SerializeField] GameObject poderMifany, poderInimigo;
     [SerializeField] Sprite[] spritesPoder;
 
+    [SerializeField] music ScriptMusic;
+    [SerializeField] Slider sliderBoss, sliderPlayer;
+    float danoBom, danoPerfeito, danoBoss;
+
+    float[] totalDeNotas = new float[3];
+
     void Start()
     {
         Debug.DrawRay(transform.position, Vector2.left * 19, Color.green);
         Debug.Log(PlayerPrefs.GetInt("FaseAtual"));
+
+        totalDeNotas[0] = ScriptMusic.tons1.Length;
+        totalDeNotas[1] = ScriptMusic.tons2.Length;
+        totalDeNotas[2] = ScriptMusic.tons3.Length;
+
+        if (PlayerPrefs.GetInt("FaseAtual") == 1)
+        {
+            CalculosDeDanoNoBoss(totalDeNotas[0]);
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+        {
+            CalculosDeDanoNoBoss(totalDeNotas[1]);
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+        {
+            CalculosDeDanoNoBoss(totalDeNotas[2]);
+        }
+    }
+
+    void CalculosDeDanoNoBoss(float total)
+    {
+        Debug.Log($"Total {total}");
+        danoPerfeito = 100 / total;
+        danoBom = 60 / total;
+
+        float porcentagem = 0.41f * total;
+        danoBoss = 100 / porcentagem;
+
+        Debug.Log($"Dano Perfeito {danoPerfeito}");
+        Debug.Log($"Dano Bom {danoBom}");
+        Debug.Log($"Dano Boss {danoBoss}");
     }
 
     void Update()
@@ -24,6 +62,8 @@ public class RayC : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 Debug.Log("PERFEITO");
+
+                sliderBoss.value -= danoPerfeito;
 
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
@@ -45,6 +85,8 @@ public class RayC : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 Debug.Log("OK");
+
+                sliderBoss.value -= danoBom;
 
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
@@ -68,6 +110,8 @@ public class RayC : MonoBehaviour
             {
                 Destroy(hit.collider.gameObject);
                 Debug.Log("ERROU");
+
+                sliderPlayer.value -= danoBoss;
 
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
