@@ -15,7 +15,6 @@ public class music : MonoBehaviour
     [SerializeField] float posicaoInicial, posicaoFinal;
 
     public GameObject prefabNota;
-    bool momentoPERFEITO, momentoOK;
 
 
     

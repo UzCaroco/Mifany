@@ -5,9 +5,11 @@ using UnityEngine;
 public class PoderMifany : MonoBehaviour
 {
     public float velocidade = 30f;
+    public SpriteRenderer render;
 
     void Update()
     {
+        render = GetComponent<SpriteRenderer>();
         transform.Translate(Vector3.right * velocidade * Time.deltaTime);
     }
 

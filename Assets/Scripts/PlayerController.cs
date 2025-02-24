@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             player = this;
             DontDestroyOnLoad(gameObject);
 
-            PlayerPrefs.SetInt("FaseAtual", 1);
+            PlayerPrefs.SetInt("FaseAtual", 3);
         }
         else
         {
@@ -63,9 +63,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") || other.CompareTag("Wall"))
+        if (other.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(1);
+            PlayerPrefs.SetInt("FaseAtual", PlayerPrefs.GetInt("FaseAtual") + 1);
+            SceneManager.LoadScene(0);
         }
     }
 }

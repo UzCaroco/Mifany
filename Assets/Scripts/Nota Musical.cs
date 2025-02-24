@@ -31,10 +31,10 @@ public class NotaMusical : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("ERROU");
-        }
-        else if (transform.position.x > 7.67)
+        */
+        if (transform.position.x > 7.67)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
 }

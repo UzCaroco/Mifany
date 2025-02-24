@@ -11,6 +11,7 @@ public class RayC : MonoBehaviour
     void Start()
     {
         Debug.DrawRay(transform.position, Vector2.left * 19, Color.green);
+        Debug.Log(PlayerPrefs.GetInt("FaseAtual"));
     }
 
     void Update()
@@ -27,17 +28,15 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                Debug.Log(img);
-
-                if (PlayerPrefs.GetInt("FaseInicial") == 1)
+                if (PlayerPrefs.GetInt("FaseAtual") == 1)
                 {
                     img.sprite = spritesPoder[0];
                 }
-                else if (PlayerPrefs.GetInt("FaseInicial") == 2)
+                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
                 {
                     img.sprite = spritesPoder[1];
                 }
-                else if (PlayerPrefs.GetInt("FaseInicial") == 3)
+                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
                 {
                     img.sprite = spritesPoder[2];
                 }
@@ -52,15 +51,15 @@ public class RayC : MonoBehaviour
 
                 Debug.Log(img);
 
-                if (PlayerPrefs.GetInt("FaseInicial") == 1)
+                if (PlayerPrefs.GetInt("FaseAtual") == 1)
                 {
                     img.sprite = spritesPoder[3];
                 }
-                else if (PlayerPrefs.GetInt("FaseInicial") == 2)
+                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
                 {
                     img.sprite = spritesPoder[3];
                 }
-                else if (PlayerPrefs.GetInt("FaseInicial") == 3)
+                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
                 {
                     img.sprite = spritesPoder[3];
                 }
@@ -75,17 +74,17 @@ public class RayC : MonoBehaviour
 
                 Debug.Log(img);
 
-                if (PlayerPrefs.GetInt("FaseInicial") == 1)
+                if (PlayerPrefs.GetInt("FaseAtual") == 1)
                 {
-                    img.sprite = spritesPoder[3];
+                    img.sprite = spritesPoder[4];
                 }
-                else if (PlayerPrefs.GetInt("FaseInicial") == 2)
+                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
                 {
-                    img.sprite = spritesPoder[3];
+                    img.sprite = spritesPoder[5];
                 }
-                else if (PlayerPrefs.GetInt("FaseInicial") == 3)
+                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
                 {
-                    img.sprite = spritesPoder[3];
+                    img.sprite = spritesPoder[6];
                 }
             }
             else if (hit.transform.position.x > 7.67)
