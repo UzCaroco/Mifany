@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class music : MonoBehaviour
 {
-    [SerializeField] float[] tons1 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
-    [SerializeField] float[] tons2 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
-    [SerializeField] float[] tons3 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
+    public float[] tons1 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
+    public float[] tons2 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
+    public float[] tons3 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
 
     [SerializeField] Sprite[] spritesVermelhos = new Sprite[5];
     [SerializeField] Sprite[] spritesAmarelos = new Sprite[5];
@@ -52,7 +52,6 @@ public class music : MonoBehaviour
 
     void CalcularEspacoEntreNotas(float[] tons)
     {
-        Debug.Log("Ativou");
         Queue<float> fila = new Queue<float>();
 
         for (int i = 0; i < tons.Length - 1; i++)
