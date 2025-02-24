@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2408181234500313674, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a428c3fb93cc46c42bbceb2a89e6a0e2, type: 3}
     - target: {fileID: 3408396754054416844, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_Name
       value: CanvaConfig
