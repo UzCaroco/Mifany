@@ -2451,7 +2451,7 @@ GameObject:
   - component: {fileID: 1811648489}
   - component: {fileID: 1811648488}
   m_Layer: 0
-  m_Name: PartituraRitmoPreto_1
+  m_Name: Partitura Preta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,7 +2898,7 @@ GameObject:
   - component: {fileID: 2146677879}
   - component: {fileID: 2146677878}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Fundo Branco Partidura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2976,13 +2976,13 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 596777969}
   - {fileID: 1334658008}
   - {fileID: 807137118}
   - {fileID: 1041190507}
   - {fileID: 1295994431}
   - {fileID: 72359164}
   - {fileID: 1775745010}
-  - {fileID: 596777969}
   - {fileID: 2146677879}
   - {fileID: 1811648489}
   - {fileID: 1801246305}
