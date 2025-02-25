@@ -14,6 +14,9 @@ public class music : MonoBehaviour
 
     [SerializeField] float posicaoInicial, posicaoFinal;
 
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] clip;
+
     public GameObject prefabNota;
 
 
@@ -21,6 +24,7 @@ public class music : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         TonsDaMusica();
     }
 
@@ -32,14 +36,17 @@ public class music : MonoBehaviour
         if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
             CalcularEspacoEntreNotas(tons1);
+            audioSource.clip = clip[0];
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
             CalcularEspacoEntreNotas(tons2);
+            audioSource.clip = clip[1];
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
             CalcularEspacoEntreNotas(tons3);
+            audioSource.clip = clip[2];
         }
 
 
