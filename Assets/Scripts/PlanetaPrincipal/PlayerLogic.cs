@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
     float dirX = 0;
+    bool isFacingRight = true;
 
     [SerializeField] float speed;
     [SerializeField] Camera cam;
@@ -22,7 +23,8 @@ public class PlayerLogic : MonoBehaviour
     void Update()
     {
         cam.transform.position = new Vector3(transform.position.x, 0 , -10);
-        
+
+        DirectionCheck();
     }
 
     private void FixedUpdate()
@@ -43,5 +45,22 @@ public class PlayerLogic : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
             animPlayer.SetBool("isWalking", false);
         }
+    }
+
+    void DirectionCheck()
+    {
+        if (isFacingRight && dirX < 0)
+        {
+            Flip();
+        }
+        if (!isFacingRight && dirX > 0)
+        {
+            Flip();
+        }
+    }
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 }
