@@ -7,6 +7,22 @@ public class NotaMusical : MonoBehaviour
 
     public float velocidade;
 
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("FaseAtual") == 1)
+        {
+            velocidade = 2;
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+        {
+            velocidade = 2;
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+        {
+            velocidade = 1.5f;
+        }
+    }
+
     void Update()
     {
         transform.Translate(Vector3.right * velocidade * Time.deltaTime);
