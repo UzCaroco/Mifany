@@ -11,6 +11,7 @@ public class RayC : MonoBehaviour
     [SerializeField] Sprite[] spritesPoder;
 
     [SerializeField] music ScriptMusic;
+    [SerializeField] PlayerNaFaseBoss scriptPlayerNaFaseBoss;
     [SerializeField] Slider sliderBoss, sliderPlayer;
     [SerializeField] AudioSource audioSource;
 
@@ -80,6 +81,8 @@ public class RayC : MonoBehaviour
                 totalDeAcertos++;
                 sliderBoss.value -= danoPerfeito;
 
+                scriptPlayerNaFaseBoss.Atacar();
+
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
@@ -103,6 +106,8 @@ public class RayC : MonoBehaviour
 
                 totalDeAcertos++;
                 sliderBoss.value -= danoBom;
+
+                scriptPlayerNaFaseBoss.Atacar();
 
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
