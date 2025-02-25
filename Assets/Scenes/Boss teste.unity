@@ -2189,6 +2189,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 72facd9bfa7f7754bad584f6bd5b646f, type: 3}
   - {fileID: 21300000, guid: bcb423c833ff4d2489beb323f4078351, type: 3}
   ScriptMusic: {fileID: 1334658007}
+  scriptPlayerNaFaseBoss: {fileID: 0}
   sliderBoss: {fileID: 482226452}
   sliderPlayer: {fileID: 1592786618}
   audioSource: {fileID: 1334658009}
@@ -2297,7 +2298,7 @@ Animator:
   m_GameObject: {fileID: 1775745004}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d8a96c309d1b9c45a0df6bf0f1e6254, type: 2}
+  m_Controller: {fileID: 9100000, guid: cbcab83d412b3d8408cbd4b773df9332, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
