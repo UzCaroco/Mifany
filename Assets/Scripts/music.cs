@@ -26,6 +26,19 @@ public class music : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         TonsDaMusica();
+
+        if (PlayerPrefs.GetInt("FaseAtual") == 1)
+        {
+            tempoDeViagem = 2;
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+        {
+            tempoDeViagem = 2;
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+        {
+            tempoDeViagem = 1.5f;
+        }
     }
 
 
