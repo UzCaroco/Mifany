@@ -16,20 +16,7 @@ public class PlayerController : MonoBehaviour
     bool wPressionado => Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
     bool sPressionado => Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
 
-    private void Awake()
-    {
-        if (player == null)
-        {
-            player = this;
-            DontDestroyOnLoad(gameObject);
-
-            PlayerPrefs.SetInt("FaseAtual", 1);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

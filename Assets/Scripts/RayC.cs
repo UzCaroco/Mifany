@@ -67,6 +67,16 @@ public class RayC : MonoBehaviour
         if (!audioSource.isPlaying && jogando)
         {
             jogando = false;
+            if  (PlayerPrefs.GetInt("FaseAtual") < 3)
+            {
+                PlayerPrefs.SetInt("FaseAtual", PlayerPrefs.GetInt("FaseAtual") + 1);
+                SceneManager.LoadScene(2);
+            }
+            else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+            {
+                SceneManager.LoadScene(0);
+            }
+            
         }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 20f, layer);
@@ -156,6 +166,30 @@ public class RayC : MonoBehaviour
             }
             else if (hit.transform.position.x > 7.67)
             {
+                sliderPlayer.value -= danoBoss;
+
+                GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
+                SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
+
+                if (PlayerPrefs.GetInt("FaseAtual") == 1)
+                {
+                    scriptAtaqueBoss[0].Atacar();
+
+                    img.sprite = spritesPoder[4];
+                }
+                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+                {
+                    scriptAtaqueBoss[1].Atacar();
+
+                    img.sprite = spritesPoder[5];
+                }
+                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
+                {
+                    scriptAtaqueBoss[2].Atacar();
+
+                    img.sprite = spritesPoder[6];
+                }
+
                 Destroy(hit.collider.gameObject);
             }
         }

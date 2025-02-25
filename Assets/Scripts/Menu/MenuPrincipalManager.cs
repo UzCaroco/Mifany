@@ -12,6 +12,10 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField] private GameObject painelOpcoes;
     [SerializeField] private GameObject painelCreditos;
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt("FaseAtual", 1);
+    }
     public void Jogar()
     {
         SceneManager.LoadScene(levelDoJogo);

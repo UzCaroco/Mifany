@@ -46,6 +46,7 @@ public class GameController : MonoBehaviour
             quads[2].material = materials[0];
 
             audioSource.clip = clip[0];
+            audioSource.Play();
 
             for (int i = 0; i < 4; i++)
             {
@@ -59,6 +60,7 @@ public class GameController : MonoBehaviour
             quads[2].material = materials[3];
 
             audioSource.clip = clip[1];
+            audioSource.Play();
 
             for (int i = 4; i < 8; i++)
             {
@@ -72,6 +74,7 @@ public class GameController : MonoBehaviour
             quads[2].material = materials[6];
 
             audioSource.clip = clip[2];
+            audioSource.Play();
 
             for (int i = 8; i < 12; i++)
             {
