@@ -12,6 +12,7 @@ public class RayC : MonoBehaviour
 
     [SerializeField] music ScriptMusic;
     [SerializeField] PlayerNaFaseBoss scriptPlayerNaFaseBoss;
+    [SerializeField] AtaqueBoss[] scriptAtaqueBoss = new AtaqueBoss[3];
     [SerializeField] Slider sliderBoss, sliderPlayer;
     [SerializeField] AudioSource audioSource;
 
@@ -137,14 +138,20 @@ public class RayC : MonoBehaviour
 
                 if (PlayerPrefs.GetInt("FaseAtual") == 1)
                 {
+                    scriptAtaqueBoss[0].Atacar();
+
                     img.sprite = spritesPoder[4];
                 }
                 else if (PlayerPrefs.GetInt("FaseAtual") == 2)
                 {
+                    scriptAtaqueBoss[1].Atacar();
+
                     img.sprite = spritesPoder[5];
                 }
                 else if (PlayerPrefs.GetInt("FaseAtual") == 3)
                 {
+                    scriptAtaqueBoss[2].Atacar();
+
                     img.sprite = spritesPoder[6];
                 }
             }
