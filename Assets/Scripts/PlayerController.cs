@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
             player = this;
             DontDestroyOnLoad(gameObject);
 
-            PlayerPrefs.SetInt("FaseAtual", 3);
+            PlayerPrefs.SetInt("FaseAtual", 1);
         }
         else
         {
