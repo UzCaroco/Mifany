@@ -9,8 +9,13 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject[] obstaculos;
     [SerializeField] MeshRenderer[] quads = new MeshRenderer[3];
     [SerializeField] Material[] materials;
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip[] clip;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         GameObject obj = GameObject.FindGameObjectWithTag("Solo");
         quads[0] = obj.GetComponent<MeshRenderer>();
         Debug.Log(obj.name);
@@ -36,6 +41,8 @@ public class GameController : MonoBehaviour
             quads[1].material = materials[1];
             quads[2].material = materials[0];
 
+            audioSource.clip = clip[0];
+
             for (int i = 0; i < 4; i++)
             {
                 obstaculos[i].SetActive(true);
@@ -47,6 +54,8 @@ public class GameController : MonoBehaviour
             quads[1].material = materials[4];
             quads[2].material = materials[3];
 
+            audioSource.clip = clip[1];
+
             for (int i = 4; i < 8; i++)
             {
                 obstaculos[i].SetActive(true);
@@ -57,6 +66,8 @@ public class GameController : MonoBehaviour
             quads[0].material = materials[8];
             quads[1].material = materials[7];
             quads[2].material = materials[6];
+
+            audioSource.clip = clip[2];
 
             for (int i = 8; i < 12; i++)
             {
