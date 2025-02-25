@@ -50,16 +50,19 @@ public class music : MonoBehaviour
         {
             CalcularEspacoEntreNotas(tons1);
             audioSource.clip = clip[0];
+            audioSource.Play();
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
             CalcularEspacoEntreNotas(tons2);
             audioSource.clip = clip[1];
+            audioSource.Play();
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
             CalcularEspacoEntreNotas(tons3);
             audioSource.clip = clip[2];
+            audioSource.Play();
         }
 
 
