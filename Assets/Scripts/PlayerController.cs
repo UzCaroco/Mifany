@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             PlayerPrefs.SetInt("FaseAtual", PlayerPrefs.GetInt("FaseAtual") + 1);
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
     }
 }

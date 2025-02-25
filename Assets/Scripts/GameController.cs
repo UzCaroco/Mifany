@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class GameController : MonoBehaviour
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] clip;
+
+    bool tocandoMusica = false;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        tocandoMusica = true;
 
         GameObject obj = GameObject.FindGameObjectWithTag("Solo");
         quads[0] = obj.GetComponent<MeshRenderer>();
@@ -73,6 +77,15 @@ public class GameController : MonoBehaviour
             {
                 obstaculos[i].SetActive(true);
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (!audioSource.isPlaying && tocandoMusica)
+        {
+            tocandoMusica = false;
+            SceneManager.LoadScene(3);
         }
     }
 }
