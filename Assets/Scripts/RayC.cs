@@ -67,7 +67,6 @@ public class RayC : MonoBehaviour
         if (!audioSource.isPlaying && jogando)
         {
             jogando = false;
-            SceneManager.LoadScene(0);
         }
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 20f, layer);
