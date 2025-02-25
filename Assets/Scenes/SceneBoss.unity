@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 72359162}
   - component: {fileID: 72359161}
   - component: {fileID: 72359160}
+  - component: {fileID: 72359165}
   m_Layer: 0
   m_Name: Cobra
   m_TagString: Boss
@@ -367,6 +368,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72359165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72359159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fdd00ad86db3b40831311a1eb50526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &264112903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1187,7 @@ GameObject:
   - component: {fileID: 1041190505}
   - component: {fileID: 1041190509}
   - component: {fileID: 1041190508}
+  - component: {fileID: 1041190510}
   m_Layer: 0
   m_Name: Cacto
   m_TagString: Boss
@@ -1331,6 +1345,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.059010267, y: -0.41307044}
   m_Size: {x: 2.0801215, y: 4.620526}
   m_Direction: 0
+--- !u!114 &1041190510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041190504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fdd00ad86db3b40831311a1eb50526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1054480991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,6 +1620,7 @@ GameObject:
   - component: {fileID: 1295994429}
   - component: {fileID: 1295994428}
   - component: {fileID: 1295994427}
+  - component: {fileID: 1295994432}
   m_Layer: 0
   m_Name: Yeti
   m_TagString: Boss
@@ -1751,6 +1778,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1295994432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295994426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1fdd00ad86db3b40831311a1eb50526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1334658006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,6 +2682,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bcb423c833ff4d2489beb323f4078351, type: 3}
   ScriptMusic: {fileID: 1334658007}
   scriptPlayerNaFaseBoss: {fileID: 1775745011}
+  scriptAtaqueBoss:
+  - {fileID: 1041190510}
+  - {fileID: 1295994432}
+  - {fileID: 72359165}
   sliderBoss: {fileID: 482226452}
   sliderPlayer: {fileID: 1592786618}
   audioSource: {fileID: 1334658009}
