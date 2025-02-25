@@ -1687,7 +1687,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.028122663, y: -0.042184353}
+  m_Offset: {x: 0.028122663, y: 2.76}
   m_Size: {x: 2.653688, y: 5.677536}
   m_Direction: 0
 --- !u!95 &1295994429
@@ -1772,7 +1772,7 @@ Transform:
   m_GameObject: {fileID: 1295994426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.798661, y: -0.43888754, z: 0}
+  m_LocalPosition: {x: 5.798661, y: -3.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2112,7 +2112,6 @@ MonoBehaviour:
   - 232.9
   - 233.2
   tons3:
-  - 0.08
   - 2.6
   - 4.3
   - 6
@@ -2340,7 +2339,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0e0cd1ad68e480349afab3a3c20ff2bc, type: 3}
   - {fileID: 8300000, guid: 8d1ac2b5470e71047a2592030f680e27, type: 3}
   prefabNota: {fileID: 8472196396448116554, guid: ce70123b5c30e134c987a516c1bd6af3, type: 3}
-  tempoDeViagem: 2
+  tempoDeViagem: 0
 --- !u!4 &1334658008
 Transform:
   m_ObjectHideFlags: 0

@@ -33,11 +33,11 @@ public class music : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
-            tempoDeViagem = 2;
+            tempoDeViagem = 1.5f;
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
-            tempoDeViagem = 1.5f;
+            tempoDeViagem = 0.8f;
         }
     }
 
