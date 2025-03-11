@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
     {
         Debug.Log(quads[0].name);
 
-        if (PlayerPrefs.GetInt("FaseAtual") == 1)
+        /*if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
             quads[0].material = materials[2];
             quads[1].material = materials[1];
@@ -49,10 +49,10 @@ public class GameController : MonoBehaviour
             audioSource.clip = clip[0];
             audioSource.Play();
 
-            /*for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 obstaculos[i].SetActive(true);
-            }*/
+            }
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
@@ -63,10 +63,10 @@ public class GameController : MonoBehaviour
             audioSource.clip = clip[1];
             audioSource.Play();
 
-            /*for (int i = 4; i < 8; i++)
+            for (int i = 4; i < 8; i++)
             {
                 obstaculos[i].SetActive(true);
-            }*/
+            }
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
@@ -77,11 +77,11 @@ public class GameController : MonoBehaviour
             audioSource.clip = clip[2];
             audioSource.Play();
 
-           /* for (int i = 8; i < 12; i++)
+            for (int i = 8; i < 12; i++)
             {
                 obstaculos[i].SetActive(true);
-            }*/
-        }
+            }
+        }*/
     }
 
     private void Update()
