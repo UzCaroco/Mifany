@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class RayC : MonoBehaviour
 {
+    [SerializeField] byte indexPhase;
+
     [SerializeField] LayerMask layer;
     [SerializeField] GameObject poderMifany, poderInimigo;
     [SerializeField] Sprite[] spritesPoder;
@@ -70,7 +72,9 @@ public class RayC : MonoBehaviour
             if  (PlayerPrefs.GetInt("FaseAtual") < 3)
             {
                 PlayerPrefs.SetInt("FaseAtual", PlayerPrefs.GetInt("FaseAtual") + 1);
-                SceneManager.LoadScene(2);
+                PlayerPrefs.SetInt("choosePhase", PlayerPrefs.GetInt("choosePhase") +  1);
+
+                SceneManager.LoadScene(indexPhase);
             }
             else if (PlayerPrefs.GetInt("FaseAtual") == 3)
             {
