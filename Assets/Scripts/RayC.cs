@@ -70,14 +70,16 @@ public class RayC : MonoBehaviour
         {
             jogando = false;
 
-            if (PlayerPrefs.GetInt("choosePhase") < 3)
-            {
-                PlayerPrefs.SetInt("choosePhase", PlayerPrefs.GetInt("choosePhase") + 1);
-            }
 
             if  (PlayerPrefs.GetInt("FaseAtual") == 1)
             {
                 PlayerPrefs.SetInt("FaseAtual", 2);
+
+
+                if (PlayerPrefs.GetInt("choosePhase") == 1)
+                {
+                    PlayerPrefs.SetInt("choosePhase", 2);
+                }
 
                 SceneManager.LoadScene(indexPhase);
             }
@@ -85,7 +87,12 @@ public class RayC : MonoBehaviour
             {
                 PlayerPrefs.SetInt("FaseAtual", 3);
 
-                SceneManager.LoadScene(0);
+                if (PlayerPrefs.GetInt("choosePhase") == 2)
+                {
+                    PlayerPrefs.SetInt("choosePhase", 3);
+                }
+
+                SceneManager.LoadScene(indexPhase);
             }
             else if (PlayerPrefs.GetInt("FaseAtual") == 3)
             {

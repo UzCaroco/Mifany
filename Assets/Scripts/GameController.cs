@@ -23,25 +23,21 @@ public class GameController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         tocandoMusica = true;
 
-        GameObject obj = GameObject.FindGameObjectWithTag("Solo");
+        /*GameObject obj = GameObject.FindGameObjectWithTag("Solo");
         quads[0] = obj.GetComponent<MeshRenderer>();
-        Debug.Log(obj.name);
 
         obj = GameObject.FindGameObjectWithTag("Paisagem");
         quads[1] = obj.GetComponent<MeshRenderer>();
-        Debug.Log(obj.name);
 
         obj = GameObject.FindGameObjectWithTag("Ceu");
         quads[2] = obj.GetComponent<MeshRenderer>();
-        Debug.Log(obj.name);
+        */
 
         MudarMateriais();
     }
 
     void MudarMateriais()
     {
-        Debug.Log(quads[0].name);
-
         /*if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
             quads[0].material = materials[2];

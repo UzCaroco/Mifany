@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b10b62098d0b14089c44c0a5af7fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reloadScene: 5
 --- !u!1 &662781318
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e498765906fe81449536efb8f7d5df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPhase: 6
   obstaculos:
   - {fileID: 0}
   - {fileID: 0}
@@ -670,9 +672,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 19ecebc1831b4964fa61aaad31acc7bf, type: 2}
   audioSource: {fileID: 0}
   clip:
-  - {fileID: 8300000, guid: f6c10ce4bb3902a419449337be7453f9, type: 3}
   - {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
-  - {fileID: 8300000, guid: b5c6f72ed2776d64cbb93fb136eb8419, type: 3}
+  - {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
+  - {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
 --- !u!4 &727431400
 Transform:
   m_ObjectHideFlags: 0
@@ -698,7 +700,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f6c10ce4bb3902a419449337be7453f9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] byte reloadScene;
+
     Rigidbody2D rb;
     static PlayerController player;
     Vector2[] vt = new Vector2[3];
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(reloadScene);
         }
     }
 

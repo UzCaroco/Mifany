@@ -9,27 +9,18 @@ public class ChoosePhase : MonoBehaviour
     [SerializeField] GameObject ErroMassage;
     [SerializeField] byte indexPhase;
 
+    [SerializeField] bool inside;
+    
     // Start is called before the first frame update
     void Start()
     {
-        if (!PlayerPrefs.HasKey("choosePhase"))
-        {
-            PlayerPrefs.SetInt("choosePhase", 1);
-        }
-
         Debug.Log("Progressão: " + PlayerPrefs.GetInt("choosePhase"));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && inside)
         {
             switch (whatPhaseIs)
             {
@@ -57,4 +48,13 @@ public class ChoosePhase : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        inside = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        inside = false;
+    } 
 }

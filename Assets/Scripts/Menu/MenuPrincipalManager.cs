@@ -16,6 +16,11 @@ public class MenuPrincipalManager : MonoBehaviour
     {
         Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
 
+        if (!PlayerPrefs.HasKey("choosePhase"))
+        {
+            PlayerPrefs.SetInt("choosePhase", 1);
+        }
+
     }
 
     public void Jogar()

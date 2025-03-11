@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7899f50bf90f154bbd448e75b6e9c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexPhase: 0
+  indexPhase: 2
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -2503,6 +2503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b10b62098d0b14089c44c0a5af7fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reloadScene: 0
 --- !u!1 &1801246302
 GameObject:
   m_ObjectHideFlags: 0
