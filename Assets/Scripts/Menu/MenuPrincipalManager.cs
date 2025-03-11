@@ -14,11 +14,16 @@ public class MenuPrincipalManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         if (!PlayerPrefs.HasKey("FaseAtual"))
         {
             PlayerPrefs.SetInt("FaseAtual", 1);
         }
+
+        Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
+
     }
+
     public void Jogar()
     {
         SceneManager.LoadScene(levelDoJogo);

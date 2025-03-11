@@ -28,7 +28,7 @@ public class RayC : MonoBehaviour
     void Start()
     {
         Debug.DrawRay(transform.position, Vector2.left * 19, Color.green);
-        Debug.Log(PlayerPrefs.GetInt("FaseAtual"));
+        Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
 
         jogando = true;
 

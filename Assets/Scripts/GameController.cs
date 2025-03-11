@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour
     bool tocandoMusica = false;
     void Start()
     {
+        Debug.Log("Fase: "+ PlayerPrefs.GetInt("FaseAtual"));
+
         audioSource = GetComponent<AudioSource>();
         tocandoMusica = true;
 
