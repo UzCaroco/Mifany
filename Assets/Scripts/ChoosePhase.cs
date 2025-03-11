@@ -33,15 +33,24 @@ public class ChoosePhase : MonoBehaviour
             {
                 case 1:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
+                    {
                         SceneManager.LoadScene(indexPhase);
+                        PlayerPrefs.SetInt("FaseAtual", 1);
+                    }
                     break;
                 case 2:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
+                    {
                         SceneManager.LoadScene(indexPhase);
+                        PlayerPrefs.SetInt("FaseAtual", 2);
+                    }
                     break;
                 case 3:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
+                    {
                         SceneManager.LoadScene(indexPhase);
+                        PlayerPrefs.SetInt("FaseAtual", 3);
+                    }
                     break;
             }
         }

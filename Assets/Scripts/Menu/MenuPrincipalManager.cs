@@ -14,7 +14,10 @@ public class MenuPrincipalManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetInt("FaseAtual", 1);
+        if (!PlayerPrefs.HasKey("FaseAtual"))
+        {
+            PlayerPrefs.SetInt("FaseAtual", 1);
+        }
     }
     public void Jogar()
     {
