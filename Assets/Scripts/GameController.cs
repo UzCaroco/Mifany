@@ -63,10 +63,10 @@ public class GameController : MonoBehaviour
             audioSource.clip = clip[1];
             audioSource.Play();
 
-            for (int i = 4; i < 8; i++)
+            /*for (int i = 4; i < 8; i++)
             {
                 obstaculos[i].SetActive(true);
-            }
+            }*/
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
@@ -77,10 +77,10 @@ public class GameController : MonoBehaviour
             audioSource.clip = clip[2];
             audioSource.Play();
 
-            for (int i = 8; i < 12; i++)
+           /* for (int i = 8; i < 12; i++)
             {
                 obstaculos[i].SetActive(true);
-            }
+            }*/
         }
     }
 
