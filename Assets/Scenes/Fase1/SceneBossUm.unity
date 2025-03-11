@@ -752,7 +752,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599422977}
-  - component: {fileID: 599422978}
   m_Layer: 0
   m_Name: Fases
   m_TagString: Untagged
@@ -775,27 +774,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1334658008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &599422978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599422976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d6560a2b8403da4e965b40946071a64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imagensbackground:
-  - {fileID: 21300000, guid: 0c4f78bc629ccde4e90804618ce23ecf, type: 3}
-  - {fileID: 21300000, guid: 42426669ba6afe248ad9e30dc3dfe48c, type: 3}
-  - {fileID: 21300000, guid: b871ceca2796cb843accfb65a431bc16, type: 3}
-  Boss:
-  - {fileID: 1041190504}
-  - {fileID: 0}
-  - {fileID: 0}
-  renderBackground: {fileID: 807137117}
 --- !u!1 &807137116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,6 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7899f50bf90f154bbd448e75b6e9c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPhase: 0
   layer:
     serializedVersion: 2
     m_Bits: 64
