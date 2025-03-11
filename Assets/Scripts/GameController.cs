@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] byte indexPhase;
     static GameController gameController;
 
     [SerializeField] GameObject[] obstaculos;
@@ -48,10 +49,10 @@ public class GameController : MonoBehaviour
             audioSource.clip = clip[0];
             audioSource.Play();
 
-            for (int i = 0; i < 4; i++)
+            /*for (int i = 0; i < 4; i++)
             {
                 obstaculos[i].SetActive(true);
-            }
+            }*/
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
@@ -88,7 +89,7 @@ public class GameController : MonoBehaviour
         if (!audioSource.isPlaying && tocandoMusica)
         {
             tocandoMusica = false;
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(indexPhase);
         }
     }
 }

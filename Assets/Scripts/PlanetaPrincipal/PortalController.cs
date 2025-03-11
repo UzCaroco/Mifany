@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PortalController : MonoBehaviour
 {
-    [SerializeField] string levelDoJogo;
+    [SerializeField] byte levelDoJogo;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {

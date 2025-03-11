@@ -995,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e498765906fe81449536efb8f7d5df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPhase: 4
   obstaculos:
   - {fileID: 137295413}
   - {fileID: 2129183142}
