@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class music : MonoBehaviour
@@ -12,20 +13,19 @@ public class music : MonoBehaviour
     [SerializeField] Sprite[] spritesAmarelos = new Sprite[5];
     [SerializeField] Sprite[] spritesAzuis = new Sprite[5];
 
-    [SerializeField] float posicaoInicial, posicaoFinal;
+    [SerializeField] float posicaoInicial = -9.5f, posicaoFinal = 3.8f;
+    [SerializeField] float tempoDeViagem = 2f; // Tempo em segundos para chegar ao destino
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip[] clip;
 
+
     public GameObject prefabNota;
-
-
     
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        posicaoInicial = -9.5f;
         audioSource = GetComponent<AudioSource>();
-        TonsDaMusica();
 
         if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
@@ -39,6 +39,14 @@ public class music : MonoBehaviour
         {
             tempoDeViagem = 0.8f;
         }
+
+        TonsDaMusica();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
 
@@ -76,31 +84,45 @@ public class music : MonoBehaviour
     void CalcularEspacoEntreNotas(float[] tons)
     {
         Queue<float> fila = new Queue<float>();
+        Queue<float> filaInstanciacao = new Queue<float>();
 
-        for (int i = 0; i < tons.Length - 1; i++)
+        float primeiro, segundo;
+
+        fila.Enqueue(tons[0]);
+
+        for (int i = 1; i < tons.Length - 1; i++)
         {
-            fila.Enqueue(tons[i + 1] - tons[i]); // Calcula o tempo de diferença entre os tons
+            fila.Enqueue(tons[i] - tempoDeViagem);
+        }
+
+        for (int i = 0; i < fila.Count - 1; ++i)
+        {
+            primeiro = fila.Dequeue();
+            segundo = fila.Peek();
+            filaInstanciacao.Enqueue(segundo - primeiro);
         }
         
-        StartCoroutine(CalcularVelocidadeDasNotas(fila));
+        StartCoroutine(CalcularVelocidadeDasNotas(filaInstanciacao));
     }
 
 
 
-    [SerializeField] float tempoDeViagem = 2f; // Tempo em segundos para chegar ao destino
+    
 
     IEnumerator CalcularVelocidadeDasNotas(Queue<float> intervalos)
     {
         while (intervalos.Count > 0)
         {
+            // Espera o intervalo definido entre as notas
+            yield return new WaitForSecondsRealtime(intervalos.Dequeue());
+
             // Calcula velocidade baseada no tempo fixo de viagem
             float distancia = posicaoFinal - posicaoInicial;
             float vel = distancia / tempoDeViagem;
 
             InstanciarNota(vel);
 
-            // Espera o intervalo definido entre as notas
-            yield return new WaitForSecondsRealtime(intervalos.Dequeue());
+            
         }
     }
 
@@ -108,7 +130,6 @@ public class music : MonoBehaviour
 
     void InstanciarNota(float vel)
     {
-
 
         GameObject instancia = Instantiate(prefabNota, new Vector3(posicaoInicial, 3.5f, 0f), Quaternion.identity);
 
