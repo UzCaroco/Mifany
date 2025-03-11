@@ -7,7 +7,7 @@ public class ChoosePhase : MonoBehaviour
 {
     [SerializeField] byte whatPhaseIs = 0;
     [SerializeField] GameObject ErroMassage;
-    [SerializeField] string nameLevelPhase;
+    [SerializeField] byte indexPhase;
 
     // Start is called before the first frame update
     void Start()
@@ -33,15 +33,15 @@ public class ChoosePhase : MonoBehaviour
             {
                 case 1:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
-                        SceneManager.LoadScene(nameLevelPhase);
+                        SceneManager.LoadScene(indexPhase);
                     break;
                 case 2:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
-                        SceneManager.LoadScene(nameLevelPhase);
+                        SceneManager.LoadScene(indexPhase);
                     break;
                 case 3:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
-                        SceneManager.LoadScene(nameLevelPhase);
+                        SceneManager.LoadScene(indexPhase);
                     break;
             }
         }

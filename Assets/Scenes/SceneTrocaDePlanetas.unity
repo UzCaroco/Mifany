@@ -738,7 +738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatPhaseIs: 1
   ErroMassage: {fileID: 1888945384}
-  nameLevelPhase: SceneNormal
+  indexPhase: 3
 --- !u!95 &979593425
 Animator:
   serializedVersion: 5
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatPhaseIs: 2
   ErroMassage: {fileID: 1888945384}
-  nameLevelPhase: SceneNormal
+  indexPhase: 5
 --- !u!95 &1340304527
 Animator:
   serializedVersion: 5
@@ -1422,8 +1422,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1632760014}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1632760010
@@ -1459,7 +1458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatPhaseIs: 3
   ErroMassage: {fileID: 1888945384}
-  nameLevelPhase: SceneNormal
+  indexPhase: 7
 --- !u!95 &1632760012
 Animator:
   serializedVersion: 5
@@ -1546,7 +1545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1340304529}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748578589
 GameObject:
@@ -1969,3 +1968,4 @@ SceneRoots:
   - {fileID: 2027241091}
   - {fileID: 979593423}
   - {fileID: 1340304529}
+  - {fileID: 1632760014}
