@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1051073ac86ebf4b95069c13b0a06db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelDoJogo: ScenePlanetaPrincipal
+  levelDoJogo: 0102
   menu: 
   painelMenuInicial: {fileID: 47735734}
   painelOpcoes: {fileID: 1748379033}

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipalManager : MonoBehaviour
 {
-    [SerializeField] private string levelDoJogo;
+    [SerializeField] private byte[] levelDoJogo;
     [SerializeField] private string menu;
 
     [SerializeField] private GameObject painelMenuInicial;
@@ -14,19 +14,25 @@ public class MenuPrincipalManager : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
-        if (!PlayerPrefs.HasKey("FaseAtual"))
-        {
-            PlayerPrefs.SetInt("FaseAtual", 1);
-        }
-
         Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
 
     }
 
     public void Jogar()
     {
-        SceneManager.LoadScene(levelDoJogo);
+        if (!PlayerPrefs.HasKey("FaseAtual"))
+        {
+            PlayerPrefs.SetInt("FaseAtual", 1);
+
+            SceneManager.LoadScene(levelDoJogo[0]);
+        }
+        else
+        {
+            SceneManager.LoadScene(levelDoJogo[1]);
+        }
+
+        Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
+
     }
     public void AbrirOpcoes()
     {

@@ -16,6 +16,8 @@ public class ChoosePhase : MonoBehaviour
         {
             PlayerPrefs.SetInt("choosePhase", 1);
         }
+
+        Debug.Log("Progressão: " + PlayerPrefs.GetInt("choosePhase"));
     }
 
     // Update is called once per frame

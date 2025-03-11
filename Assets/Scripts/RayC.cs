@@ -69,12 +69,23 @@ public class RayC : MonoBehaviour
         if (!audioSource.isPlaying && jogando)
         {
             jogando = false;
-            if  (PlayerPrefs.GetInt("FaseAtual") < 3)
+
+            if (PlayerPrefs.GetInt("choosePhase") < 3)
             {
-                PlayerPrefs.SetInt("FaseAtual", PlayerPrefs.GetInt("FaseAtual") + 1);
-                PlayerPrefs.SetInt("choosePhase", PlayerPrefs.GetInt("choosePhase") +  1);
+                PlayerPrefs.SetInt("choosePhase", PlayerPrefs.GetInt("choosePhase") + 1);
+            }
+
+            if  (PlayerPrefs.GetInt("FaseAtual") == 1)
+            {
+                PlayerPrefs.SetInt("FaseAtual", 2);
 
                 SceneManager.LoadScene(indexPhase);
+            }
+            else if (PlayerPrefs.GetInt("FaseAtual") == 2)
+            {
+                PlayerPrefs.SetInt("FaseAtual", 3);
+
+                SceneManager.LoadScene(0);
             }
             else if (PlayerPrefs.GetInt("FaseAtual") == 3)
             {
