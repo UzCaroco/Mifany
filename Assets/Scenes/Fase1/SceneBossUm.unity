@@ -1945,7 +1945,7 @@ MonoBehaviour:
   - {fileID: 368631143, guid: b07dda92166542c4bada031373e73a2e, type: 3}
   posicaoInicial: -9.5
   posicaoFinal: 4.01
-  tempoDeViagem: 0
+  tempoDeViagem: 2
   audioSource: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: c172dbf0bf076e14ca377780d6187a04, type: 3}

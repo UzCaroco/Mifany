@@ -29,24 +29,22 @@ public class music : MonoBehaviour
 
         if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
-            tempoDeViagem = 2;
+            tempoDeViagem = 1;
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
-            tempoDeViagem = 1.5f;
+            tempoDeViagem = 1f;
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
-            tempoDeViagem = 0.8f;
+            tempoDeViagem = 3f;
         }
-
-        TonsDaMusica();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        TonsDaMusica();
     }
 
 
@@ -57,6 +55,7 @@ public class music : MonoBehaviour
         if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
             CalcularEspacoEntreNotas(tons1);
+            
             audioSource.clip = clip[0];
             audioSource.Play();
         }
@@ -94,12 +93,19 @@ public class music : MonoBehaviour
         {
             fila.Enqueue(tons[i] - tempoDeViagem);
         }
+        Debug.Log("quantidade na fila "+fila.Count);
+        Debug.Log("quantidade na fila " +tons.Length);
 
-        for (int i = 0; i < fila.Count - 1; ++i)
+
+        for (int i = 0; i < tons.Length - 2; ++i)
         {
-            primeiro = fila.Dequeue();
+
+            primeiro = fila.Peek(); 
+            fila.Dequeue();
             segundo = fila.Peek();
+
             filaInstanciacao.Enqueue(segundo - primeiro);
+
         }
         
         StartCoroutine(CalcularVelocidadeDasNotas(filaInstanciacao));
@@ -130,7 +136,6 @@ public class music : MonoBehaviour
 
     void InstanciarNota(float vel)
     {
-
         GameObject instancia = Instantiate(prefabNota, new Vector3(posicaoInicial, 3.5f, 0f), Quaternion.identity);
 
         int nota = Random.Range(0, 5);

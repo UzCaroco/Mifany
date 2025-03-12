@@ -52,7 +52,6 @@ public class RayC : MonoBehaviour
 
     void CalculosDeDanoNoBoss(float total)
     {
-        Debug.Log($"Total {total}");
         danoPerfeito = 100 / total;
         danoBom = 60 / total;
 
@@ -63,7 +62,7 @@ public class RayC : MonoBehaviour
         Debug.Log($"Dano Bom {danoBom}");
         Debug.Log($"Dano Boss {danoBoss}");
     }
-
+    int x = 0;
     void Update()
     {
         if (!audioSource.isPlaying && jogando)
@@ -100,11 +99,14 @@ public class RayC : MonoBehaviour
             }
             
         }
-
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 20f, layer);
 
         if (Input.GetKeyDown(KeyCode.Space) && hit.collider != null)
         {
+            x++;
+            Debug.Log(x);
+
             if (hit.collider.gameObject.transform.position.x >= 3.3 && hit.collider.gameObject.transform.position.x <= 4.3)
             {
                 Destroy(hit.collider.gameObject);

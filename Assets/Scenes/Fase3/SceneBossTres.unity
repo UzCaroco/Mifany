@@ -1433,6 +1433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tons1:
+  - 0
   - 1.3
   - 2.3
   - 3.2
@@ -1724,6 +1725,7 @@ MonoBehaviour:
   - 232.9
   - 233.2
   tons3:
+  - 0
   - 2.6
   - 4.3
   - 6
@@ -1944,14 +1946,14 @@ MonoBehaviour:
   - {fileID: -1886924734, guid: b07dda92166542c4bada031373e73a2e, type: 3}
   - {fileID: 368631143, guid: b07dda92166542c4bada031373e73a2e, type: 3}
   posicaoInicial: -9.5
-  posicaoFinal: 3.8
+  posicaoFinal: 4.01
+  tempoDeViagem: 0
   audioSource: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: c172dbf0bf076e14ca377780d6187a04, type: 3}
   - {fileID: 8300000, guid: 0e0cd1ad68e480349afab3a3c20ff2bc, type: 3}
   - {fileID: 8300000, guid: 8d1ac2b5470e71047a2592030f680e27, type: 3}
   prefabNota: {fileID: 8472196396448116554, guid: ce70123b5c30e134c987a516c1bd6af3, type: 3}
-  tempoDeViagem: 0
 --- !u!4 &1334658008
 Transform:
   m_ObjectHideFlags: 0
@@ -2503,6 +2505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b10b62098d0b14089c44c0a5af7fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reloadScene: 0
 --- !u!1 &1801246302
 GameObject:
   m_ObjectHideFlags: 0
