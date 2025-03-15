@@ -1433,7 +1433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tons1:
-  - 0
   - 1.3
   - 2.3
   - 3.2
