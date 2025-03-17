@@ -16,8 +16,6 @@ public class music : MonoBehaviour
     [SerializeField] float posicaoInicial = -9.5f, posicaoFinal = 3.8f;
     [SerializeField] float tempoDeViagem = 2f; // Tempo em segundos para chegar ao destino
 
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip[] clip;
 
 
     public GameObject prefabNota;
@@ -25,20 +23,7 @@ public class music : MonoBehaviour
     private void Awake()
     {
         posicaoInicial = -9.5f;
-        audioSource = GetComponent<AudioSource>();
 
-        if (PlayerPrefs.GetInt("FaseAtual") == 1)
-        {
-            tempoDeViagem = 1;
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-        {
-            tempoDeViagem = 2f;
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-        {
-            tempoDeViagem = 3f;
-        }
     }
 
     // Start is called before the first frame update
@@ -56,22 +41,16 @@ public class music : MonoBehaviour
         {
             //CalcularEspacoEntreNotas(tons1);
             CarregarCorrotinas(tons1);
-            audioSource.clip = clip[0];
-            audioSource.Play();
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 2)
         {
             //CalcularEspacoEntreNotas(tons2);
             CarregarCorrotinas(tons2);
-            audioSource.clip = clip[1];
-            audioSource.Play();
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
             //CalcularEspacoEntreNotas(tons3);
             CarregarCorrotinas(tons3);
-            audioSource.clip = clip[2];
-            audioSource.Play();
         }
 
 
