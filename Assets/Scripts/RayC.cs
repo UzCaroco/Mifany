@@ -33,21 +33,8 @@ public class RayC : MonoBehaviour
         jogando = true;
 
         totalDeNotas[0] = ScriptMusic.tons1.Length;
-        totalDeNotas[1] = ScriptMusic.tons2.Length;
-        totalDeNotas[2] = ScriptMusic.tons3.Length;
+        CalculosDeDanoNoBoss(totalDeNotas[0]);
 
-        if (PlayerPrefs.GetInt("FaseAtual") == 1)
-        {
-            CalculosDeDanoNoBoss(totalDeNotas[0]);
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-        {
-            CalculosDeDanoNoBoss(totalDeNotas[1]);
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-        {
-            CalculosDeDanoNoBoss(totalDeNotas[2]);
-        }
     }
 
     void CalculosDeDanoNoBoss(float total)
@@ -120,18 +107,7 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                if (PlayerPrefs.GetInt("FaseAtual") == 1)
-                {
-                    img.sprite = spritesPoder[0];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-                {
-                    img.sprite = spritesPoder[1];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-                {
-                    img.sprite = spritesPoder[2];
-                }
+                img.sprite = spritesPoder[0];
             }
             else if (hit.collider.gameObject.transform.position.x >= 1.8 && hit.collider.gameObject.transform.position.x <= 5.8)
             {
@@ -146,18 +122,7 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                if (PlayerPrefs.GetInt("FaseAtual") == 1)
-                {
-                    img.sprite = spritesPoder[3];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-                {
-                    img.sprite = spritesPoder[3];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-                {
-                    img.sprite = spritesPoder[3];
-                }
+                img.sprite = spritesPoder[1];
             }
             else if ((hit.transform.position.x < 1.8 || hit.transform.position.x > 5.8))
             {
@@ -169,24 +134,10 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                if (PlayerPrefs.GetInt("FaseAtual") == 1)
-                {
-                    scriptAtaqueBoss[0].Atacar();
+                scriptAtaqueBoss[0].Atacar();
 
-                    img.sprite = spritesPoder[4];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-                {
-                    scriptAtaqueBoss[1].Atacar();
-
-                    img.sprite = spritesPoder[5];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-                {
-                    scriptAtaqueBoss[2].Atacar();
-
-                    img.sprite = spritesPoder[6];
-                }
+                img.sprite = spritesPoder[2];
+                
             }
             else if (hit.transform.position.x > 7.67)
             {
@@ -195,24 +146,9 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                if (PlayerPrefs.GetInt("FaseAtual") == 1)
-                {
-                    scriptAtaqueBoss[0].Atacar();
+                scriptAtaqueBoss[0].Atacar();
 
-                    img.sprite = spritesPoder[4];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-                {
-                    scriptAtaqueBoss[1].Atacar();
-
-                    img.sprite = spritesPoder[5];
-                }
-                else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-                {
-                    scriptAtaqueBoss[2].Atacar();
-
-                    img.sprite = spritesPoder[6];
-                }
+                img.sprite = spritesPoder[4];
 
                 Destroy(hit.collider.gameObject);
             }

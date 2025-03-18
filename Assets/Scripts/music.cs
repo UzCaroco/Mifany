@@ -6,25 +6,16 @@ using UnityEngine;
 public class music : MonoBehaviour
 {
     public float[] tons1 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
-    public float[] tons2 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
-    public float[] tons3 = new float[] { 0, 4, 8, 10, 12, 13, 14, 18 };
 
     [SerializeField] Sprite[] spritesVermelhos = new Sprite[5];
-    [SerializeField] Sprite[] spritesAmarelos = new Sprite[5];
-    [SerializeField] Sprite[] spritesAzuis = new Sprite[5];
 
-    [SerializeField] float posicaoInicial = -9.5f, posicaoFinal = 3.8f;
+    [SerializeField] float posicaoInicial, posicaoFinal;
     [SerializeField] float tempoDeViagem = 2f; // Tempo em segundos para chegar ao destino
 
 
 
     public GameObject prefabNota;
     
-    private void Awake()
-    {
-        posicaoInicial = -9.5f;
-
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,23 +26,10 @@ public class music : MonoBehaviour
 
     void TonsDaMusica()
     {
-        
 
-        if (PlayerPrefs.GetInt("FaseAtual") == 1)
-        {
-            //CalcularEspacoEntreNotas(tons1);
-            CarregarCorrotinas(tons1);
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-        {
-            //CalcularEspacoEntreNotas(tons2);
-            CarregarCorrotinas(tons2);
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-        {
-            //CalcularEspacoEntreNotas(tons3);
-            CarregarCorrotinas(tons3);
-        }
+
+        //CalcularEspacoEntreNotas(tons1);
+        CarregarCorrotinas(tons1);
 
 
     }
@@ -152,20 +130,7 @@ public class music : MonoBehaviour
 
     Sprite ResultadoSorteio(int x)
     {
-        if (PlayerPrefs.GetInt("FaseAtual") == 1)
-        {
-            return spritesAmarelos[x];
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-        {
-            return spritesAzuis[x]; 
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-        {
-            return spritesVermelhos[x];
-        }
-
-        return null;
+        return spritesVermelhos[x];
     }
 
 }
