@@ -11,10 +11,6 @@ public class NotaMusical : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x > 7.67)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void FixedUpdate()

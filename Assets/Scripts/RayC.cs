@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -139,8 +140,13 @@ public class RayC : MonoBehaviour
                 img.sprite = spritesPoder[2];
                 
             }
-            else if (hit.transform.position.x > 7.67)
+        }
+        try
+        {
+            if (hit.transform.position.x >= 7.67)
             {
+                Destroy(hit.collider.gameObject);
+
                 sliderPlayer.value -= danoBoss;
 
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
@@ -148,10 +154,14 @@ public class RayC : MonoBehaviour
 
                 scriptAtaqueBoss[0].Atacar();
 
-                img.sprite = spritesPoder[4];
+                img.sprite = spritesPoder[2];
 
-                Destroy(hit.collider.gameObject);
+
             }
+        }
+        catch
+        {
+
         }
     }
 }
