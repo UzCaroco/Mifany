@@ -1745,7 +1745,7 @@ MonoBehaviour:
   - {fileID: 368631143, guid: b07dda92166542c4bada031373e73a2e, type: 3}
   posicaoInicial: -9.5
   posicaoFinal: 4.01
-  tempoDeViagem: 2
+  tempoDeViagem: 1.7
   prefabNota: {fileID: 8472196396448116554, guid: ce70123b5c30e134c987a516c1bd6af3, type: 3}
 --- !u!4 &1334658008
 Transform:
