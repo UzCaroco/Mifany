@@ -10,7 +10,7 @@ public class RayC : MonoBehaviour
     [SerializeField] byte indexPhase;
 
     [SerializeField] LayerMask layer;
-    [SerializeField] GameObject poderMifany, poderInimigo;
+    [SerializeField] GameObject poderMifany, poderInimigo, Perfeito, Bom, Ruim, Errou;
     [SerializeField] Sprite[] spritesPoder;
 
     [SerializeField] music ScriptMusic;
@@ -97,6 +97,9 @@ public class RayC : MonoBehaviour
 
             if (hit.collider.gameObject.transform.position.x >= 3.3 && hit.collider.gameObject.transform.position.x <= 4.3)
             {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Perfeito, posicao, Quaternion.identity);
+
                 Destroy(hit.collider.gameObject);
                 Debug.Log("PERFEITO");
 
@@ -109,10 +112,16 @@ public class RayC : MonoBehaviour
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
                 img.sprite = spritesPoder[0];
+
+                
             }
             else if (hit.collider.gameObject.transform.position.x >= 1.8 && hit.collider.gameObject.transform.position.x <= 5.8)
             {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Bom, posicao, Quaternion.identity);
+
                 Destroy(hit.collider.gameObject);
+
                 Debug.Log("OK");
 
                 totalDeAcertos++;
@@ -127,7 +136,11 @@ public class RayC : MonoBehaviour
             }
             else if ((hit.transform.position.x < 1.8 || hit.transform.position.x > 5.8))
             {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Ruim, posicao, Quaternion.identity);
+
                 Destroy(hit.collider.gameObject);
+
                 Debug.Log("ERROU");
 
                 sliderPlayer.value -= danoBoss;
@@ -145,6 +158,9 @@ public class RayC : MonoBehaviour
         {
             if (hit.transform.position.x >= 7.67)
             {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Errou, posicao, Quaternion.identity);
+
                 Destroy(hit.collider.gameObject);
 
                 sliderPlayer.value -= danoBoss;
