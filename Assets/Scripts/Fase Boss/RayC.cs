@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,10 +18,14 @@ public class RayC : MonoBehaviour
     [SerializeField] Slider sliderBoss, sliderPlayer;
     [SerializeField] AudioSource audioSource;
 
+    [SerializeField] GameObject ComboInstancia;
+    [SerializeField] Canvas canvas;
+
     float danoBom, danoPerfeito, danoBoss, _70notas;
 
     float[] totalDeNotas = new float[3];
     short totalDeAcertos = 0;
+    ushort combo = 0;
 
     bool jogando = false;
 
@@ -78,6 +83,13 @@ public class RayC : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 Debug.Log("PERFEITO");
 
+                combo++;
+                GameObject instanciaCombo = Instantiate(ComboInstancia, canvas.transform);
+                RectTransform rectTransform = instanciaCombo.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = new Vector2(-869, 253f);
+                TextMeshProUGUI textoCombo = instanciaCombo.GetComponent<TextMeshProUGUI>();
+                textoCombo.text = $"<color=#FFFFFF>COMBO</color>\n<color=#FFE500>x{combo.ToString()}</color>"; 
+
                 totalDeAcertos++;
                 sliderBoss.value -= danoPerfeito;
 
@@ -99,6 +111,7 @@ public class RayC : MonoBehaviour
 
                 Debug.Log("OK");
 
+                combo = 0;
                 totalDeAcertos++;
                 sliderBoss.value -= danoBom;
 
@@ -118,6 +131,7 @@ public class RayC : MonoBehaviour
 
                 Debug.Log("ERROU");
 
+                combo = 0;
                 sliderPlayer.value -= danoBoss;
 
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
@@ -138,6 +152,7 @@ public class RayC : MonoBehaviour
 
                 Destroy(hit.collider.gameObject);
 
+                combo = 0;
                 sliderPlayer.value -= danoBoss;
 
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);

@@ -3082,7 +3082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852801085270668535, guid: 1a8021cea3787ae49beb1611e92283f8, type: 3}
       propertyPath: indexPhase
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6227700689311372802, guid: 1a8021cea3787ae49beb1611e92283f8, type: 3}
       propertyPath: m_LocalPosition.x
