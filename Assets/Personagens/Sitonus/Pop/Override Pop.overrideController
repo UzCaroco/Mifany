@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Override Pop
+  m_Controller: {fileID: 9100000, guid: ae506a4e05ff5254791d24c5be5d2359, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a2b1faf4dd62c084bb4b2d59cb483072, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 526709ff8d67a9b4888e69b93fc20c2b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5c9ddf946dfcc9540ab9071ce56030c9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8ebbf32a9f327e549b114ad39c68e5fd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 92c1483f3c0ee06409492400e320ef28, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cf0f23d8eab23214888b7f0649e2162e, type: 2}

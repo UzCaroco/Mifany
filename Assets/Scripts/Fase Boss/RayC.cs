@@ -7,19 +7,17 @@ using UnityEngine.UI;
 
 public class RayC : MonoBehaviour
 {
-    [SerializeField] byte indexPhase;
-
     [SerializeField] LayerMask layer;
     [SerializeField] GameObject poderMifany, poderInimigo, Perfeito, Bom, Ruim, Errou;
     [SerializeField] Sprite[] spritesPoder;
 
     [SerializeField] music ScriptMusic;
     [SerializeField] PlayerNaFaseBoss scriptPlayerNaFaseBoss;
-    [SerializeField] AtaqueBoss[] scriptAtaqueBoss = new AtaqueBoss[3];
+    [SerializeField] AtaqueBoss scriptAtaqueBoss;
     [SerializeField] Slider sliderBoss, sliderPlayer;
     [SerializeField] AudioSource audioSource;
 
-    float danoBom, danoPerfeito, danoBoss;
+    float danoBom, danoPerfeito, danoBoss, _70notas;
 
     float[] totalDeNotas = new float[3];
     short totalDeAcertos = 0;
@@ -41,10 +39,12 @@ public class RayC : MonoBehaviour
     void CalculosDeDanoNoBoss(float total)
     {
         danoPerfeito = 100 / total;
-        danoBom = 60 / total;
+        danoBom = 70 / total;
 
-        float porcentagem = 0.41f * total;
+        float porcentagem = 0.30f * total;
         danoBoss = 100 / porcentagem;
+
+        _70notas = 0.7f * total;
 
         Debug.Log($"Dano Perfeito {danoPerfeito}");
         Debug.Log($"Dano Bom {danoBom}");
@@ -57,35 +57,10 @@ public class RayC : MonoBehaviour
         {
             jogando = false;
 
-
-            if  (PlayerPrefs.GetInt("FaseAtual") == 1)
+            if (totalDeAcertos <= _70notas)
             {
-                PlayerPrefs.SetInt("FaseAtual", 2);
-
-
-                if (PlayerPrefs.GetInt("choosePhase") == 1)
-                {
-                    PlayerPrefs.SetInt("choosePhase", 2);
-                }
-
-                SceneManager.LoadScene(indexPhase);
+                scriptAtaqueBoss.Morrer();
             }
-            else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-            {
-                PlayerPrefs.SetInt("FaseAtual", 3);
-
-                if (PlayerPrefs.GetInt("choosePhase") == 2)
-                {
-                    PlayerPrefs.SetInt("choosePhase", 3);
-                }
-
-                SceneManager.LoadScene(indexPhase);
-            }
-            else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-            {
-                SceneManager.LoadScene(0);
-            }
-            
         }
         
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 20f, layer);
@@ -148,7 +123,7 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                scriptAtaqueBoss[0].Atacar();
+                scriptAtaqueBoss.Atacar();
 
                 img.sprite = spritesPoder[2];
                 
@@ -168,7 +143,7 @@ public class RayC : MonoBehaviour
                 GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
                 SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
 
-                scriptAtaqueBoss[0].Atacar();
+                scriptAtaqueBoss.Atacar();
 
                 img.sprite = spritesPoder[2];
 

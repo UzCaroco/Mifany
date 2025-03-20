@@ -5,6 +5,7 @@ using UnityEngine;
 public class AtaqueBoss : MonoBehaviour
 {
     Animator ani;
+    [SerializeField] CutsceneSitonus CutsceneSitonus;
     void Start()
     {
         ani = GetComponent<Animator>();
@@ -13,5 +14,16 @@ public class AtaqueBoss : MonoBehaviour
     public void Atacar()
     {
         ani.SetTrigger("IsAttack");
+    }
+
+    public void Morrer()
+    {
+        ani.SetTrigger("IsDead");
+    }
+
+    public void AtivarCutscene()
+    {
+        CutsceneSitonus.AtivarCutscene();
+        gameObject.SetActive(false);
     }
 }
