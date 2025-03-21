@@ -63,7 +63,7 @@ public class RayC : MonoBehaviour
         {
             jogando = false;
 
-            if (totalDeAcertos <= _70notas)
+            if (totalDeAcertos >= _70notas)
             {
                 scriptAtaqueBoss.Morrer();
             }

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 
 public class CutsceneCamera : MonoBehaviour
 {
-    [SerializeField] byte indexPhase;
+    
     [SerializeField] GameObject portal;
-    [SerializeField] GameObject player;
+    [SerializeField] PlayerNaFaseBoss player;
+    [SerializeField] CutsceneSitonus cutsceneSitonus;
     Animator ani;
     void Start()
     {
@@ -22,5 +24,11 @@ public class CutsceneCamera : MonoBehaviour
     public void AtivarPortal()
     {
         portal.SetActive(true);
+    }
+
+    public void AtivarPlayerESitonus()
+    {
+        player.AtivarCutscenePlayer();
+        cutsceneSitonus.MudarVelocidade();
     }
 }

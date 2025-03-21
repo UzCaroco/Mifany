@@ -747,9 +747,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf8f312cbeb8ba499d90b53f4a0b398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexPhase: 0
   portal: {fileID: 1841346572}
-  player: {fileID: 1775745004}
+  player: {fileID: 1775745011}
+  cutsceneSitonus: {fileID: 1106789488}
 --- !u!95 &519420034
 Animator:
   serializedVersion: 5
@@ -2503,6 +2503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018167d88fbc4e64abb03c3f0517c3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexPhase: 2
 --- !u!114 &1775745012
 MonoBehaviour:
   m_ObjectHideFlags: 0

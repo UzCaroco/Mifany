@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class CutsceneSitonus : MonoBehaviour
 {
-    [SerializeField] byte indexPhase;
     [SerializeField] CutsceneCamera CutsceneCamera;
     Animator ani;
     void Start()
@@ -17,6 +16,7 @@ public class CutsceneSitonus : MonoBehaviour
     public void AtivarCutscene()
     {
         ani.SetTrigger("Cutscene");
+        
     }
 
     public void CutscenePortal()
@@ -24,34 +24,10 @@ public class CutsceneSitonus : MonoBehaviour
         CutsceneCamera.AtivarCutscene();
     }
 
-    public void CarregarNovaCena()
+    public void MudarVelocidade()
     {
-        if (PlayerPrefs.GetInt("FaseAtual") == 1)
-        {
-            PlayerPrefs.SetInt("FaseAtual", 2);
-
-
-            if (PlayerPrefs.GetInt("choosePhase") == 1)
-            {
-                PlayerPrefs.SetInt("choosePhase", 2);
-            }
-
-            SceneManager.LoadScene(indexPhase);
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 2)
-        {
-            PlayerPrefs.SetInt("FaseAtual", 3);
-
-            if (PlayerPrefs.GetInt("choosePhase") == 2)
-            {
-                PlayerPrefs.SetInt("choosePhase", 3);
-            }
-
-            SceneManager.LoadScene(indexPhase);
-        }
-        else if (PlayerPrefs.GetInt("FaseAtual") == 3)
-        {
-            SceneManager.LoadScene(0);
-        }
+        ani.speed = 0.5f;
     }
+
+    
 }
