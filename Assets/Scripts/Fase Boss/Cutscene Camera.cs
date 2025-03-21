@@ -6,6 +6,7 @@ public class CutsceneCamera : MonoBehaviour
 {
     [SerializeField] byte indexPhase;
     [SerializeField] GameObject portal;
+    [SerializeField] GameObject player;
     Animator ani;
     void Start()
     {
