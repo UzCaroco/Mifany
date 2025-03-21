@@ -20,6 +20,7 @@ public class RayC : MonoBehaviour
 
     [SerializeField] GameObject ComboInstancia;
     [SerializeField] Canvas canvas;
+    GameObject instanciaCombo;
 
     float danoBom, danoPerfeito, danoBoss, _70notas;
 
@@ -62,7 +63,7 @@ public class RayC : MonoBehaviour
         {
             jogando = false;
 
-            if (totalDeAcertos <= _70notas)
+            if (totalDeAcertos >= _70notas)
             {
                 scriptAtaqueBoss.Morrer();
             }
@@ -84,7 +85,11 @@ public class RayC : MonoBehaviour
                 Debug.Log("PERFEITO");
 
                 combo++;
-                GameObject instanciaCombo = Instantiate(ComboInstancia, canvas.transform);
+                if (instanciaCombo != null)
+                {
+                    Destroy(instanciaCombo);
+                }
+                instanciaCombo = Instantiate(ComboInstancia, canvas.transform);
                 RectTransform rectTransform = instanciaCombo.GetComponent<RectTransform>();
                 rectTransform.anchoredPosition = new Vector2(-869, 253f);
                 TextMeshProUGUI textoCombo = instanciaCombo.GetComponent<TextMeshProUGUI>();
