@@ -199,6 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  spritesPortais:
+  - {fileID: 0}
+  - {fileID: 0}
   whatPhaseIs: 1
   ErroMassage: {fileID: 1888945384}
   indexPhase: 3
@@ -906,6 +910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  spritesPortais:
+  - {fileID: -49231963, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
+  - {fileID: 1937504723, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
   whatPhaseIs: 1
   ErroMassage: {fileID: 1888945384}
   indexPhase: 3
@@ -1551,6 +1559,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  spritesPortais:
+  - {fileID: 864717335, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
+  - {fileID: -2021056753, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
   whatPhaseIs: 2
   ErroMassage: {fileID: 1888945384}
   indexPhase: 5
@@ -1720,6 +1732,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  spritesPortais:
+  - {fileID: 103634597, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
+  - {fileID: -1849190647, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
   whatPhaseIs: 3
   ErroMassage: {fileID: 1888945384}
   indexPhase: 7
@@ -1844,7 +1860,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.79084754, y: -1.0635545}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1855,7 +1871,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.266667, y: 5.4466667}
+  m_Size: {x: 3.6849723, y: 7.573776}
   m_EdgeRadius: 0
 --- !u!1 &1748578589
 GameObject:

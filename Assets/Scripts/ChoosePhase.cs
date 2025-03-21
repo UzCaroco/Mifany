@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ChoosePhase : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite[] spritesPortais = new Sprite[2];
+
     [SerializeField] byte whatPhaseIs = 0;
     [SerializeField] GameObject ErroMassage;
     [SerializeField] byte indexPhase;
@@ -14,7 +17,10 @@ public class ChoosePhase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         Debug.Log("Progressão: " + PlayerPrefs.GetInt("choosePhase"));
+        OpenPortal(PlayerPrefs.GetInt("choosePhase"));
     }
 
     // Update is called once per frame
@@ -27,22 +33,22 @@ public class ChoosePhase : MonoBehaviour
                 case 1:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
                     {
-                        SceneManager.LoadScene(indexPhase);
                         PlayerPrefs.SetInt("FaseAtual", 1);
+                        StartCoroutine(InsideThePortal());
                     }
                     break;
                 case 2:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
                     {
-                        SceneManager.LoadScene(indexPhase);
                         PlayerPrefs.SetInt("FaseAtual", 2);
+                        StartCoroutine(InsideThePortal());
                     }
                     break;
                 case 3:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
                     {
-                        SceneManager.LoadScene(indexPhase);
                         PlayerPrefs.SetInt("FaseAtual", 3);
+                        StartCoroutine(InsideThePortal());
                     }
                     break;
             }
@@ -57,4 +63,57 @@ public class ChoosePhase : MonoBehaviour
     {
         inside = false;
     } 
+
+    IEnumerator InsideThePortal()
+    {
+
+
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(indexPhase);
+    }
+
+    void OpenPortal(int progressaoFase)
+    {
+        switch (progressaoFase) {
+            case 1:
+                if (whatPhaseIs == 1)
+                {
+                    spriteRenderer.sprite = spritesPortais[1];
+                    spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+                }
+                else
+                {
+                    spriteRenderer.sprite = spritesPortais[0];
+                    spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1f);
+                }
+            break;
+            
+            case 2:
+                if (whatPhaseIs <= 2)
+                {
+                    spriteRenderer.sprite = spritesPortais[1];
+                    spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+                }
+                else
+                {
+                    spriteRenderer.sprite = spritesPortais[0];
+                    spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1f);
+                }
+                break;
+            
+            case 3:
+                if (whatPhaseIs <= 3)
+                {
+                    spriteRenderer.sprite = spritesPortais[1];
+                    spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+                }
+                else
+                {
+                    spriteRenderer.sprite = spritesPortais[0];
+                    spriteRenderer.color = new Color(0.8f, 0.8f, 0.8f, 1f);
+                }
+            break;
+        }
+    }
 }
