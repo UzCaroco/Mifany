@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CutsceneSitonus : MonoBehaviour
 {
     [SerializeField] byte indexPhase;
+    [SerializeField] CutsceneCamera CutsceneCamera;
     Animator ani;
     void Start()
     {
@@ -16,6 +17,11 @@ public class CutsceneSitonus : MonoBehaviour
     public void AtivarCutscene()
     {
         ani.SetTrigger("Cutscene");
+    }
+
+    public void CutscenePortal()
+    {
+        CutsceneCamera.AtivarCutscene();
     }
 
     public void CarregarNovaCena()
