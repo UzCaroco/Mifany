@@ -2359,7 +2359,7 @@ MonoBehaviour:
   sliderPlayer: {fileID: 1592786618}
   audioSource: {fileID: 1334658009}
   ComboInstancia: {fileID: 356907817044380961, guid: be6d4e49aab3c7a4f8317b2dd7545254, type: 3}
-  canvas: {fileID: 1055560674}
+  canvas: {fileID: 0}
 --- !u!1 &1775745004
 GameObject:
   m_ObjectHideFlags: 0

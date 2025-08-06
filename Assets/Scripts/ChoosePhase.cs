@@ -28,7 +28,7 @@ public class ChoosePhase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && inside)
+        if (Input.GetKey(KeyCode.Space) && inside)
         {
             switch (whatPhaseIs)
             {

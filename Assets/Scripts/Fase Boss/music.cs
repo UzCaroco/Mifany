@@ -44,7 +44,7 @@ public class music : MonoBehaviour
     }
     IEnumerator CarregarNotaMusical(float tempo)
     {
-        yield return new WaitForSeconds(tempo - tempoDeViagem);
+        yield return new WaitForSecondsRealtime(tempo - tempoDeViagem);
 
         // Calcula velocidade baseada no tempo fixo de viagem
         float distancia = posicaoFinal - posicaoInicial;
