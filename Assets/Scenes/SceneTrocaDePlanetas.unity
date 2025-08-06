@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameModePainel: {fileID: 0}
+  gameModePainel: {fileID: 231253848}
   spriteRenderer: {fileID: 1340304528}
   spritesPortais:
   - {fileID: 864717335, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
@@ -2303,7 +2303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameModePainel: {fileID: 0}
+  gameModePainel: {fileID: 231253848}
   spriteRenderer: {fileID: 1632760013}
   spritesPortais:
   - {fileID: 103634597, guid: 976aa87feb3eb57439014da2aaadcf0e, type: 3}
