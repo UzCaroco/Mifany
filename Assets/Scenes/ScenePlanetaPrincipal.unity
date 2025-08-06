@@ -677,7 +677,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.2235293, y: 3.0382352}
+    oldSize: {x: 2.2, y: 3.2125}
     newSize: {x: 2.2, y: 3.2125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1150,6 +1150,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2efc93792674a4c9149e04140588e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjMaterialForChange:
+  - {fileID: 1748578591}
+  - {fileID: 1788528101}
+  - {fileID: 699103184}
+  - {fileID: 1225576891}
+  - {fileID: 517548715}
+  CenarioCasasPretoBranco: {fileID: 2100000, guid: e7269ea3897248f4da9e8fe2cfc4e53b, type: 2}
+  CenarioCasasColorido: {fileID: 2100000, guid: 90c1a0c288fefe04587b6456ca3f9e5c, type: 2}
   levelDoJogo: 3
 --- !u!1 &1042097824
 GameObject:
@@ -1708,7 +1716,7 @@ PrefabInstance:
     - target: {fileID: 804476740072926215, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
-      objectReference: {fileID: 1387777894, guid: 615b87a807ff9ab49b30c72cbb420334, type: 3}
+      objectReference: {fileID: 1003293437, guid: 615b87a807ff9ab49b30c72cbb420334, type: 3}
     - target: {fileID: 1026427709871407253, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_Transition
       value: 2
@@ -1812,7 +1820,7 @@ PrefabInstance:
     - target: {fileID: 3747546991121860523, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1278401418, guid: 615b87a807ff9ab49b30c72cbb420334, type: 3}
+      objectReference: {fileID: 155670447, guid: 615b87a807ff9ab49b30c72cbb420334, type: 3}
     - target: {fileID: 4225755713565295413, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_Sprite
       value: 

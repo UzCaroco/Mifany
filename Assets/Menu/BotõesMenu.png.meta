@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615b87a807ff9ab49b30c72cbb420334
+guid: 9e22b3726c912fe4197087990b487a3a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BotaoConfiguracao_0
+      name: "Bot\xF5esMenu_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 124
-        width: 2005
-        height: 1730
+        x: 68
+        y: 3726
+        width: 4493
+        height: 1067
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4791f05ed52dd0543953cbc3150f82ec
-      internalID: 155670447
+      spriteID: ac12b8d964159d8408d751d65c19354d
+      internalID: -383991071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BotaoConfiguracao_1
+      name: "Bot\xF5esMenu_1"
       rect:
         serializedVersion: 2
-        x: 2241
-        y: 0
-        width: 2006
-        height: 1731
+        x: 95
+        y: 2503
+        width: 4492
+        height: 1067
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de9c2981d38263147974ad71a637caa1
-      internalID: 1003293437
+      spriteID: 392ca61fd8825f7408cb5d53104c86a8
+      internalID: -714794485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bot\xF5esMenu_2"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1223
+        width: 4492
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c295ce20a3e204f94587df92274775
+      internalID: -732204707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Bot\xF5esMenu_3"
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 4493
+        height: 1066
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8167b75ce821440b2a52e07a92a7fa
+      internalID: -1094358861
       vertices: []
       indices: 
       edges: []
@@ -175,8 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BotaoConfiguracao_0: 155670447
-      BotaoConfiguracao_1: 1003293437
+      "Bot\xF5esMenu_0": -383991071
+      "Bot\xF5esMenu_1": -714794485
+      "Bot\xF5esMenu_2": -732204707
+      "Bot\xF5esMenu_3": -1094358861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

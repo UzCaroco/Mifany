@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615b87a807ff9ab49b30c72cbb420334
+guid: ed6797c4ab0c00242a07e70c94170aee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 210
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BotaoConfiguracao_0
+      name: CenarioPortais_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 124
-        width: 2005
-        height: 1730
+        x: 1931
+        y: 578
+        width: 3837
+        height: 2196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4791f05ed52dd0543953cbc3150f82ec
-      internalID: 155670447
+      spriteID: a3faf6b62bef1f94ea5e8e32b117bcb8
+      internalID: 1847695373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BotaoConfiguracao_1
+      name: CenarioPortais_1
       rect:
         serializedVersion: 2
-        x: 2241
-        y: 0
-        width: 2006
-        height: 1731
+        x: 5768
+        y: 578
+        width: 3837
+        height: 2196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de9c2981d38263147974ad71a637caa1
-      internalID: 1003293437
+      spriteID: 6d9331907b0ed7e4cafd4f6eee638414
+      internalID: 1408168523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CenarioPortais_2
+      rect:
+        serializedVersion: 2
+        x: 9605
+        y: 578
+        width: 3837
+        height: 2196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7869865ad207544b585e3def9b2acf
+      internalID: 1793147380
       vertices: []
       indices: 
       edges: []
@@ -175,8 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BotaoConfiguracao_0: 155670447
-      BotaoConfiguracao_1: 1003293437
+      CenarioPortais_0: 1847695373
+      CenarioPortais_1: 1408168523
+      CenarioPortais_2: 1793147380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

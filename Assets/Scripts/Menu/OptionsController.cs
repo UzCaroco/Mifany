@@ -19,7 +19,7 @@ public class OptionsController : MonoBehaviour
 
     void AbrirOpcoes()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
         {
             PainelOpcoes.SetActive(true);
             Time.timeScale = 0f;

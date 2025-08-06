@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChoosePhase : MonoBehaviour
 {
+    [SerializeField] GameObject gameModePainel;
+    Coroutine startCorou;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Sprite[] spritesPortais = new Sprite[2];
 
@@ -19,7 +21,7 @@ public class ChoosePhase : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        Debug.Log("Progressão: " + PlayerPrefs.GetInt("choosePhase"));
+        Debug.Log("Progressï¿½o: " + PlayerPrefs.GetInt("choosePhase"));
         OpenPortal(PlayerPrefs.GetInt("choosePhase"));
     }
 
@@ -33,22 +35,28 @@ public class ChoosePhase : MonoBehaviour
                 case 1:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
                     {
-                        PlayerPrefs.SetInt("FaseAtual", 1);
-                        StartCoroutine(InsideThePortal());
+                        PlayerPrefs.SetInt("FaseAtual", 1); //3 e 4
+                        //StartCoroutine(InsideThePortal());
+                        
+                        gameModePainel.SetActive(true);
                     }
                     break;
                 case 2:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
                     {
-                        PlayerPrefs.SetInt("FaseAtual", 2);
-                        StartCoroutine(InsideThePortal());
+                        PlayerPrefs.SetInt("FaseAtual", 2); //5 e 6
+                        //StartCoroutine(InsideThePortal());
+                        
+                        gameModePainel.SetActive(true);
                     }
                     break;
                 case 3:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
                     {
-                        PlayerPrefs.SetInt("FaseAtual", 3);
-                        StartCoroutine(InsideThePortal());
+                        PlayerPrefs.SetInt("FaseAtual", 3); //7 e 8
+                        //StartCoroutine(InsideThePortal());
+                        
+                        gameModePainel.SetActive(true);
                     }
                     break;
             }
@@ -62,12 +70,50 @@ public class ChoosePhase : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         inside = false;
-    } 
+    }
+
+    public void StartCoroutineForChangeScene(int playerChoose)
+    {
+        if (PlayerPrefs.GetInt("FaseAtual", 1) == 1)
+        {
+            if (playerChoose == 2)
+            {
+                indexPhase = 4;
+            }
+            else
+            {
+                indexPhase = 3;
+            }    
+        }
+        else if (PlayerPrefs.GetInt("FaseAtual", 1) == 2)
+        {
+            if (playerChoose == 2)
+            {
+                indexPhase = 6;
+            }
+            else
+            {
+                indexPhase = 5;
+            }  
+        }
+
+        else if (PlayerPrefs.GetInt("FaseAtual", 1) == 3)
+        {
+            if (playerChoose == 2)
+            {
+                indexPhase = 8;
+            }
+            else
+            {
+                indexPhase = 7;
+            }  
+        }    
+
+        startCorou = StartCoroutine(InsideThePortal());
+    }
 
     IEnumerator InsideThePortal()
     {
-
-
         yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene(indexPhase);

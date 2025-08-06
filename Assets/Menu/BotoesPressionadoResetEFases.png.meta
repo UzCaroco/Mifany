@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 615b87a807ff9ab49b30c72cbb420334
+guid: 8500bfcdcc447e8478f8995ee5e4f7de
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BotaoConfiguracao_0
+      name: BotoesPressionadoResetEFases_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 124
-        width: 2005
-        height: 1730
+        y: 1368
+        width: 4493
+        height: 1066
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4791f05ed52dd0543953cbc3150f82ec
-      internalID: 155670447
+      spriteID: 5f2d44f6a8ed1304e8921c4f14c3c9c5
+      internalID: 1296774076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BotaoConfiguracao_1
+      name: BotoesPressionadoResetEFases_1
       rect:
         serializedVersion: 2
-        x: 2241
+        x: 67
         y: 0
-        width: 2006
-        height: 1731
+        width: 4452
+        height: 1129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de9c2981d38263147974ad71a637caa1
-      internalID: 1003293437
+      spriteID: dfa2e5b0cf396214f81d1f58fe233b70
+      internalID: 1265396089
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BotaoConfiguracao_0: 155670447
-      BotaoConfiguracao_1: 1003293437
+      BotoesPressionadoResetEFases_0: 1296774076
+      BotoesPressionadoResetEFases_1: 1265396089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
