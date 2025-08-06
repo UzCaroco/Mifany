@@ -1024,7 +1024,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ba4a757deeaf8fc48a35d755ad313c54, type: 2}
   - {fileID: 2100000, guid: 252e454a14884794d90d35f85c191f72, type: 2}
   - {fileID: 2100000, guid: 19ecebc1831b4964fa61aaad31acc7bf, type: 2}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
   clip:
   - {fileID: 8300000, guid: f6c10ce4bb3902a419449337be7453f9, type: 3}
   - {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
