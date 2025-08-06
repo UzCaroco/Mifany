@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    private SpriteRenderer layerPlayer; 
     [SerializeField] byte reloadScene;
 
     Rigidbody2D rb;
@@ -13,14 +14,13 @@ public class PlayerController : MonoBehaviour
     Vector2[] vt = new Vector2[3];
     int posicaoNaPista = 1;
 
-
-
     bool wPressionado => Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
     bool sPressionado => Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
 
    
     void Start()
     {
+        layerPlayer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
         vt[0] = new Vector2(-6f, -3.15f);
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void MudarDePosicao()
     {
-        if(posicaoNaPista >= 0 && posicaoNaPista < 2 && wPressionado)
+        if (posicaoNaPista >= 0 && posicaoNaPista < 2 && wPressionado)
         {
             posicaoNaPista++;
             transform.position = vt[posicaoNaPista];
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             transform.position = vt[posicaoNaPista];
         }
 
-        
+        layerPlayer.sortingOrder = 2 - posicaoNaPista;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
