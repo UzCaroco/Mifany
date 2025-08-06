@@ -62,10 +62,16 @@ public class RayC : MonoBehaviour
         if (!audioSource.isPlaying && jogando)
         {
             jogando = false;
+            Debug.Log("Música finalizada");
 
             if (totalDeAcertos >= _70notas)
             {
                 scriptAtaqueBoss.Morrer();
+                Debug.Log("Você venceu o Boss!");
+            }
+            else
+            {
+                Debug.Log("Você perdeu o Boss!");
             }
         }
         

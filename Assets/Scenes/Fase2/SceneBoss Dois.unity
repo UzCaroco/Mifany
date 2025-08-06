@@ -1582,12 +1582,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b64c77ba59e2284289fed194fdf9a3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f50a79f73204bd442864246f711c09fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.2285714, y: 5.7619047}
+  m_Size: {x: 4.0857143, y: 5.7619047}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2317,7 +2317,7 @@ MonoBehaviour:
   sliderPlayer: {fileID: 1592786618}
   audioSource: {fileID: 1334658009}
   ComboInstancia: {fileID: 356907817044380961, guid: be6d4e49aab3c7a4f8317b2dd7545254, type: 3}
-  canvas: {fileID: 0}
+  canvas: {fileID: 1055560674}
 --- !u!1 &1775745004
 GameObject:
   m_ObjectHideFlags: 0
