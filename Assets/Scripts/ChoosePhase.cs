@@ -72,6 +72,11 @@ public class ChoosePhase : MonoBehaviour
         inside = false;
     }
 
+    public void ClosePainelGameMode()
+    {
+        gameModePainel.SetActive(false);
+    }
+
     public void StartCoroutineForChangeScene(int playerChoose)
     {
         if (PlayerPrefs.GetInt("FaseAtual", 1) == 1)
@@ -83,7 +88,7 @@ public class ChoosePhase : MonoBehaviour
             else
             {
                 indexPhase = 3;
-            }    
+            }
         }
         else if (PlayerPrefs.GetInt("FaseAtual", 1) == 2)
         {
@@ -94,7 +99,7 @@ public class ChoosePhase : MonoBehaviour
             else
             {
                 indexPhase = 5;
-            }  
+            }
         }
 
         else if (PlayerPrefs.GetInt("FaseAtual", 1) == 3)
@@ -106,8 +111,8 @@ public class ChoosePhase : MonoBehaviour
             else
             {
                 indexPhase = 7;
-            }  
-        }    
+            }
+        }
 
         startCorou = StartCoroutine(InsideThePortal());
     }
