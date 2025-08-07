@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 277400955}
   - component: {fileID: 277400959}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Chao
   m_TagString: Solo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,12 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeInicial: 2
-  velocidadeMaxima: 9
+  velocidadeInicial: 0.43
+  velocidadeMaxima: 0.788
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
 --- !u!1 &286039665
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +912,7 @@ MonoBehaviour:
   - {x: 11, y: -1.47}
   - {x: 11, y: -2.42}
   - {x: 11, y: -3.4}
-  velocidadeInicial: 5
+  velocidadeInicial: 9
   velocidadeMaxima: 16.5
   velocidadeAtual: 0
   tempoFinal: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   - {x: 11, y: -1.44}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.34}
-  velocidadeInicial: 5
+  velocidadeInicial: 9
   velocidadeMaxima: 16.5
   velocidadeAtual: 0
   tempoFinal: 0
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   - {x: 11, y: -1.47}
   - {x: 11, y: -2.42}
   - {x: 11, y: -3.4}
-  velocidadeInicial: 5
+  velocidadeInicial: 9
   velocidadeMaxima: 16.5
   velocidadeAtual: 0
   tempoFinal: 0
@@ -1380,7 +1380,7 @@ MonoBehaviour:
   - {x: 11, y: -1.44}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.34}
-  velocidadeInicial: 5
+  velocidadeInicial: 9
   velocidadeMaxima: 16.5
   velocidadeAtual: 0
   tempoFinal: 0
@@ -1529,7 +1529,7 @@ GameObject:
   - component: {fileID: 1414236738}
   - component: {fileID: 1414236742}
   m_Layer: 0
-  m_Name: Quad (2)
+  m_Name: Ceu
   m_TagString: Ceu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1634,12 +1634,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeInicial: 2
-  velocidadeMaxima: 9
+  velocidadeInicial: 0.29
+  velocidadeMaxima: 0.531
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
 --- !u!1 &1723483570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 1723483571}
   - component: {fileID: 1723483575}
   m_Layer: 0
-  m_Name: Quad (1)
+  m_Name: Cenario
   m_TagString: Paisagem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1759,12 +1759,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeInicial: 2
-  velocidadeMaxima: 9
+  velocidadeInicial: 0.35
+  velocidadeMaxima: 0.641
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
