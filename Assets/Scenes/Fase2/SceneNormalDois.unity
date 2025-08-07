@@ -823,12 +823,12 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 5
+  velocidadeInicial: 15
   velocidadeMaxima: 10
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
   posicaoInicial: {fileID: 0}
 --- !u!50 &811721965
 Rigidbody2D:
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidadeInicial: 5
+  velocidadeInicial: 15
   velocidadeMaxima: 10
   velocidadeAtual: 0
   tempoFinal: 0
@@ -1309,12 +1309,12 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 5
+  velocidadeInicial: 15
   velocidadeMaxima: 10
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
   posicaoInicial: {fileID: 0}
 --- !u!50 &1461602269
 Rigidbody2D:
@@ -1622,12 +1622,12 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidadeInicial: 5
+  velocidadeInicial: 15
   velocidadeMaxima: 10
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
   posicaoInicial: {fileID: 0}
 --- !u!70 &2066677802
 CapsuleCollider2D:
