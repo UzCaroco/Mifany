@@ -823,8 +823,8 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 12
-  velocidadeMaxima: 10
+  velocidadeInicial: 5
+  velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
@@ -1016,8 +1016,8 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidadeInicial: 12
-  velocidadeMaxima: 10
+  velocidadeInicial: 5
+  velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
@@ -1309,8 +1309,8 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 12
-  velocidadeMaxima: 10
+  velocidadeInicial: 5
+  velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
@@ -1622,8 +1622,8 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidadeInicial: 12
-  velocidadeMaxima: 10
+  velocidadeInicial: 5
+  velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
