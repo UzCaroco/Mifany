@@ -823,7 +823,13 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidade: 6
+  velocidadeInicial: 5
+  velocidadeMaxima: 10
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 0}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &811721965
 Rigidbody2D:
   serializedVersion: 4
@@ -1010,7 +1016,13 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidade: 6
+  velocidadeInicial: 5
+  velocidadeMaxima: 10
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!70 &1250091079
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1297,7 +1309,13 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidade: 6
+  velocidadeInicial: 5
+  velocidadeMaxima: 10
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 0}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &1461602269
 Rigidbody2D:
   serializedVersion: 4
@@ -1604,7 +1622,13 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidade: 6
+  velocidadeInicial: 5
+  velocidadeMaxima: 10
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 0}
+  posicaoInicial: {fileID: 0}
 --- !u!70 &2066677802
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

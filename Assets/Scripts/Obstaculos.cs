@@ -10,17 +10,27 @@ public class Obstaculos : MonoBehaviour
     Vector2 vetor, vt;
     [SerializeField] Vector2[] posicao = new Vector2[3];
 
-    [SerializeField] float velocidade = 5f;
+    [SerializeField] float velocidadeInicial = 5f, velocidadeMaxima = 10, velocidadeAtual, tempoFinal, aceleracao;
+    [SerializeField] AudioSource audioSource;
+
+    [SerializeField] Transform posicaoInicial;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         vetor = new Vector2 (-1, 0).normalized;
+
+        //posicaoInicial.position = transform.position;
+        tempoFinal = audioSource.clip.length;
+        aceleracao = (velocidadeMaxima - velocidadeInicial) / tempoFinal;
     }
 
     private void Update()
     {
+        velocidadeAtual = velocidadeInicial + aceleracao * audioSource.time;
+
         if (transform.position.x < -11)
         {
             int sorteio = Random.Range(0, 3);
@@ -33,7 +43,10 @@ public class Obstaculos : MonoBehaviour
 
     private void FixedUpdate()
     {
-        vt = vetor * Time.deltaTime * velocidade + rb.position;
+        vt = vetor * Time.deltaTime * velocidadeAtual + rb.position;
         rb.MovePosition(vt);
+
+
+
     }
 }
