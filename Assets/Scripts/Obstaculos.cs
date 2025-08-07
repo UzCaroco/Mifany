@@ -13,8 +13,6 @@ public class Obstaculos : MonoBehaviour
     [SerializeField] float velocidadeInicial = 5f, velocidadeMaxima = 10, velocidadeAtual, tempoFinal, aceleracao;
     [SerializeField] AudioSource audioSource;
 
-    [SerializeField] Transform posicaoInicial;
-
 
     void Start()
     {
@@ -22,7 +20,6 @@ public class Obstaculos : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         vetor = new Vector2 (-1, 0).normalized;
 
-        //posicaoInicial.position = transform.position;
         tempoFinal = audioSource.clip.length;
         aceleracao = (velocidadeMaxima - velocidadeInicial) / tempoFinal;
     }
