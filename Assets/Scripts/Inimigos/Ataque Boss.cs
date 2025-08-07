@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AtaqueBoss : MonoBehaviour
 {
+    [SerializeField] GameObject[] objForDesable;
     Animator ani;
     [SerializeField] CutsceneSitonus CutsceneSitonus;
     
@@ -19,6 +20,11 @@ public class AtaqueBoss : MonoBehaviour
 
     public void Morrer()
     {
+        for (int i = 0; i < objForDesable.Length; i++)
+        {
+            objForDesable[i].SetActive(false);
+        }
+        
         ani.SetTrigger("IsDead");
 
         //PlayerPrefs.SetInt("ConclusaoDeFase", PlayerPrefs.GetInt("ConclusaoDeFase") + 1);
