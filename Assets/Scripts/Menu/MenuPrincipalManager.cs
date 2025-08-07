@@ -21,6 +21,7 @@ public class MenuPrincipalManager : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("ConclusaoDaFase"))
         {
+            Debug.Log("Chave ConclusaoDaFase 0");
             PlayerPrefs.SetInt("ConclusaoDaFase", 0);
         }
 

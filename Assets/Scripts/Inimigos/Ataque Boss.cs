@@ -20,6 +20,30 @@ public class AtaqueBoss : MonoBehaviour
     public void Morrer()
     {
         ani.SetTrigger("IsDead");
+
+        //PlayerPrefs.SetInt("ConclusaoDeFase", PlayerPrefs.GetInt("ConclusaoDeFase") + 1);
+        switch (PlayerPrefs.GetInt("ConclusaoDaFase"))
+        {
+            case 0:
+                if (PlayerPrefs.GetInt("FaseAtual") == 1)
+                {
+                    PlayerPrefs.SetInt("ConclusaoDaFase", 1);
+                }
+                break;
+            case 1:
+                if (PlayerPrefs.GetInt("FaseAtual") == 2)
+                {
+                    PlayerPrefs.SetInt("ConclusaoDaFase", 2);
+                }
+                break;
+            case 2:
+                if (PlayerPrefs.GetInt("FaseAtual") == 3)
+                {
+                    PlayerPrefs.SetInt("ConclusaoDaFase", 3);
+                }
+                break;
+        }
+        Debug.Log("ConclusaoDaFase: " + PlayerPrefs.GetInt("ConclusaoDaFase"));
     }
 
     public void AtivarCutscene()

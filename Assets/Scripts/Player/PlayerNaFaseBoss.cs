@@ -25,6 +25,8 @@ public class PlayerNaFaseBoss : MonoBehaviour
 
     public void CarregarNovaCena()
     {
+        Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
+
         if (PlayerPrefs.GetInt("FaseAtual") == 1)
         {
             PlayerPrefs.SetInt("FaseAtual", 2);
