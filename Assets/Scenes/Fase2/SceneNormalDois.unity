@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 277400955}
   - component: {fileID: 277400959}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Chao
   m_TagString: Solo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,7 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.28
+  velocidadeInicial: 0.33
+  velocidadeMaxima: 0.565
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
 --- !u!1 &286039665
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,10 +661,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  quads:
-  - {fileID: 277400956}
-  - {fileID: 1723483572}
-  - {fileID: 1414236739}
   materials:
   - {fileID: 2100000, guid: ec5a9ca0f26fd234a94764c1f4f1179f, type: 2}
   - {fileID: 2100000, guid: 5d6aa29aa5ae72e4196cc1f1821aae91, type: 2}
@@ -670,7 +671,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ba4a757deeaf8fc48a35d755ad313c54, type: 2}
   - {fileID: 2100000, guid: 252e454a14884794d90d35f85c191f72, type: 2}
   - {fileID: 2100000, guid: 19ecebc1831b4964fa61aaad31acc7bf, type: 2}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
   clip:
   - {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
   - {fileID: 8300000, guid: a16fc39e5d62a774d80184af370ec0bd, type: 3}
@@ -823,13 +824,12 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 5
+  velocidadeInicial: 7
   velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!50 &811721965
 Rigidbody2D:
   serializedVersion: 4
@@ -1016,13 +1016,12 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidadeInicial: 5
+  velocidadeInicial: 7
   velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!70 &1250091079
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1166,7 +1165,7 @@ GameObject:
   - component: {fileID: 1414236738}
   - component: {fileID: 1414236742}
   m_Layer: 0
-  m_Name: Quad (2)
+  m_Name: Ceu
   m_TagString: Ceu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1271,7 +1270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.12
+  velocidadeInicial: 0.23
+  velocidadeMaxima: 0.394
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
 --- !u!1 &1461602267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,13 +1313,12 @@ MonoBehaviour:
   - {x: 11, y: -1.42}
   - {x: 11, y: -2.43}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 5
+  velocidadeInicial: 7
   velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!50 &1461602269
 Rigidbody2D:
   serializedVersion: 4
@@ -1480,7 +1483,7 @@ GameObject:
   - component: {fileID: 1723483571}
   - component: {fileID: 1723483575}
   m_Layer: 0
-  m_Name: Quad (1)
+  m_Name: Cenario
   m_TagString: Paisagem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1585,7 +1588,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.18
+  velocidadeInicial: 0.28
+  velocidadeMaxima: 0.48
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
 --- !u!1 &2066677800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,13 +1630,12 @@ MonoBehaviour:
   - {x: 11, y: -1.398209}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.35}
-  velocidadeInicial: 5
+  velocidadeInicial: 7
   velocidadeMaxima: 12
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!70 &2066677802
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
