@@ -28,7 +28,7 @@ public class MenuPrincipalManager : MonoBehaviour
         }
         else
         {
-            if (PlayerPrefs.GetInt("FaseAtual") >= 1)
+            if (PlayerPrefs.GetInt("FaseAtual") >= 2)
             {
                 faseBtn.interactable = true;
                 resetBtn.interactable = true;
