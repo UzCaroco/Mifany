@@ -68,10 +68,10 @@ public class RayC : MonoBehaviour
                 scriptAtaqueBoss.Morrer();
             }
         }
-        
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, 20f, layer);
 
-        if (Input.GetKeyDown(KeyCode.Space) && hit.collider != null)
+        if (((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) || (Input.GetMouseButtonDown(0))) && hit.collider != null)
         {
             x++;
             Debug.Log(x);
@@ -93,7 +93,7 @@ public class RayC : MonoBehaviour
                 RectTransform rectTransform = instanciaCombo.GetComponent<RectTransform>();
                 rectTransform.anchoredPosition = new Vector2(-869, 253f);
                 TextMeshProUGUI textoCombo = instanciaCombo.GetComponent<TextMeshProUGUI>();
-                textoCombo.text = $"<color=#FFFFFF>COMBO</color>\n<color=#FFE500>x{combo.ToString()}</color>"; 
+                textoCombo.text = $"<color=#FFFFFF>COMBO</color>\n<color=#FFE500>x{combo.ToString()}</color>";
 
                 totalDeAcertos++;
                 sliderBoss.value -= danoPerfeito;
@@ -105,7 +105,7 @@ public class RayC : MonoBehaviour
 
                 img.sprite = spritesPoder[0];
 
-                
+
             }
             else if (hit.collider.gameObject.transform.position.x >= 1.8 && hit.collider.gameObject.transform.position.x <= 5.8)
             {
@@ -154,6 +154,95 @@ public class RayC : MonoBehaviour
 
             }
         }
+        else if (Input.touchCount > 0 && hit.collider != null)
+        {
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                     x++;
+            Debug.Log(x);
+
+            if (hit.collider.gameObject.transform.position.x >= 3.3 && hit.collider.gameObject.transform.position.x <= 4.3)
+            {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Perfeito, posicao, Quaternion.identity);
+
+                Destroy(hit.collider.gameObject);
+                Debug.Log("PERFEITO");
+
+                combo++;
+                if (instanciaCombo != null)
+                {
+                    Destroy(instanciaCombo);
+                }
+                instanciaCombo = Instantiate(ComboInstancia, canvas.transform);
+                RectTransform rectTransform = instanciaCombo.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = new Vector2(-869, 253f);
+                TextMeshProUGUI textoCombo = instanciaCombo.GetComponent<TextMeshProUGUI>();
+                textoCombo.text = $"<color=#FFFFFF>COMBO</color>\n<color=#FFE500>x{combo.ToString()}</color>";
+
+                totalDeAcertos++;
+                sliderBoss.value -= danoPerfeito;
+
+                scriptPlayerNaFaseBoss.Atacar();
+
+                GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
+                SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
+
+                img.sprite = spritesPoder[0];
+
+
+            }
+            else if (hit.collider.gameObject.transform.position.x >= 1.8 && hit.collider.gameObject.transform.position.x <= 5.8)
+            {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Bom, posicao, Quaternion.identity);
+
+                Destroy(hit.collider.gameObject);
+
+                Debug.Log("OK");
+
+                combo = 0;
+                totalDeAcertos++;
+                sliderBoss.value -= danoBom;
+
+                scriptPlayerNaFaseBoss.Atacar();
+
+                GameObject instancia = Instantiate(poderMifany, new Vector2(-3.77f, 0), Quaternion.identity);
+                SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
+
+                img.sprite = spritesPoder[1];
+            }
+            else if ((hit.transform.position.x < 1.8 || hit.transform.position.x > 5.8))
+            {
+                Vector2 posicao = new Vector2(hit.collider.gameObject.transform.position.x, 2.4f);
+                Instantiate(Ruim, posicao, Quaternion.identity);
+
+                Destroy(hit.collider.gameObject);
+
+                Debug.Log("ERROU");
+
+                combo = 0;
+                sliderPlayer.value -= danoBoss;
+
+                GameObject instancia = Instantiate(poderInimigo, new Vector2(2.2f, 0), Quaternion.identity);
+                SpriteRenderer img = instancia.GetComponent<SpriteRenderer>();
+
+                scriptAtaqueBoss.Atacar();
+
+                img.sprite = spritesPoder[2];
+
+                if (sliderPlayer.value <= 0)
+                {
+                    Debug.Log("Game Over");
+                    SceneManager.LoadScene(1); // Fase 4
+                }
+
+            }
+                    break;
+            }
+        }
         try
         {
             if (hit.transform.position.x >= 7.67)
@@ -184,5 +273,6 @@ public class RayC : MonoBehaviour
         {
 
         }
+        
     }
 }

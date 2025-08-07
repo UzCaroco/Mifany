@@ -28,59 +28,75 @@ public class ChoosePhase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) && inside)
+        print(PlayerPrefs.GetInt("ConclusaoDaFase"));
+        if (((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))) && inside)
         {
-            switch (whatPhaseIs)
+            AtivarPortal();
+        }
+        else if (Input.GetMouseButtonDown(0) && inside)
+        {
+            Vector3 touchWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 touchPos2D = new Vector2(touchWorldPos.x, touchWorldPos.y);
+            RaycastHit2D hit = Physics2D.Raycast(touchPos2D, Vector2.zero);
+            
+            if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                case 1:
-                    if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
-                    {
-                        PlayerPrefs.SetInt("FaseAtual", 1); //3 e 4
+                AtivarPortal();
+            }    
+        }
+    }
 
-                        if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 1)
-                        {
-                            gameModePainel.SetActive(true);
-                        }
-                        else
-                        {
-                            indexPhase = 3;
-                            startCorou = StartCoroutine(InsideThePortal());
-                        }
-                    }
-                    break;
-                case 2:
-                    if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
+    void AtivarPortal()
+    {
+        print("ATIVANDO PORTAL");
+        switch (whatPhaseIs)
+        {
+            case 1:
+                if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
+                {
+                    PlayerPrefs.SetInt("FaseAtual", 1); //3 e 4
+                    if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 1)
                     {
-                        PlayerPrefs.SetInt("FaseAtual", 2); //5 e 6
-                        
-                        if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 2)
-                        {
-                            gameModePainel.SetActive(true);
-                        }
-                        else
-                        {
-                            indexPhase = 5;
-                            startCorou = StartCoroutine(InsideThePortal());
-                        }
+                        gameModePainel.SetActive(true);
+                        print("Entrei aqui");
                     }
-                    break;
-                case 3:
-                    if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
+                    else
                     {
-                        PlayerPrefs.SetInt("FaseAtual", 3); //7 e 8
-                        
-                        if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 3)
-                        {
-                            gameModePainel.SetActive(true);
-                        }
-                        else
-                        {
-                            indexPhase = 7;
-                            startCorou = StartCoroutine(InsideThePortal());
-                        }
+                        indexPhase = 3;
+                        startCorou = StartCoroutine(InsideThePortal());
                     }
-                    break;
-            }
+                }
+                break;
+            case 2:
+                if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
+                {
+                    PlayerPrefs.SetInt("FaseAtual", 2); //5 e 6
+                    if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 2)
+                    {
+                        gameModePainel.SetActive(true);
+                    }
+                    else
+                    {
+                        indexPhase = 5;
+                        startCorou = StartCoroutine(InsideThePortal());
+                    }
+                }
+                break;
+            case 3:
+                if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
+                {
+                    PlayerPrefs.SetInt("FaseAtual", 3); //7 e 8
+                    if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 3)
+                    {
+                        gameModePainel.SetActive(true);
+                    }
+                    else
+                    {
+                        indexPhase = 7;
+                        startCorou = StartCoroutine(InsideThePortal());
+                    }
+                }
+                break;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

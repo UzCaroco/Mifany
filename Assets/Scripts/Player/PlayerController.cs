@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +13,11 @@ public class PlayerController : MonoBehaviour
 
     bool wPressionado => Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
     bool sPressionado => Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
+
+    Vector2 touchStart;
+    Vector2 touchEnd;
+    //float swipeThreshold = 30f;
+    bool swipeDetectado = false;
 
    
     void Start()
@@ -47,7 +49,72 @@ public class PlayerController : MonoBehaviour
             transform.position = vt[posicaoNaPista];
         }
 
+        DetectarSwipe();
+
         layerPlayer.sortingOrder = 2 - posicaoNaPista;
+    }
+
+    void DetectarSwipe()
+    {
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                touchStart = touch.position;
+                swipeDetectado = false;
+            }
+
+            else if (touch.phase == TouchPhase.Moved && !swipeDetectado)
+            {
+                Vector2 delta = touch.position - touchStart;
+
+                if (Mathf.Abs(delta.y) > Mathf.Abs(delta.x))
+                {
+                    if (delta.y > 10f)
+                    {
+                        MoverParaCima();
+                        swipeDetectado = true;
+                    }
+                    else if (delta.y < -10f)
+                    {
+                        MoverParaBaixo();
+                        swipeDetectado = true;
+                    }
+                }
+            }
+
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                swipeDetectado = false;
+            }
+        }
+    }
+
+    void ResetSwipeThreshold()
+    {
+        //swipeThreshold = 30f;
+    }
+
+    void MoverParaCima()
+    {
+        if (posicaoNaPista < 2)
+        {
+            posicaoNaPista++;
+            transform.position = vt[posicaoNaPista];
+            //layerPlayer.sortingOrder = 2 - posicaoNaPista;
+        }
+    }
+
+    void MoverParaBaixo()
+    {
+        if (posicaoNaPista > 0)
+        {
+            posicaoNaPista--;
+            transform.position = vt[posicaoNaPista];
+            //layerPlayer.sortingOrder = 2 - posicaoNaPista;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -57,5 +124,4 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(reloadScene);
         }
     }
-
 }
