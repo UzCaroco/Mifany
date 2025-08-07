@@ -702,7 +702,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b5c6f72ed2776d64cbb93fb136eb8419, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -911,7 +911,13 @@ MonoBehaviour:
   - {x: 11, y: -1.47}
   - {x: 11, y: -2.42}
   - {x: 11, y: -3.4}
-  velocidade: 6
+  velocidadeInicial: 15
+  velocidadeMaxima: 15
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &1092994837
 Rigidbody2D:
   serializedVersion: 4
@@ -1010,7 +1016,13 @@ MonoBehaviour:
   - {x: 11, y: -1.44}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.34}
-  velocidade: 6
+  velocidadeInicial: 15
+  velocidadeMaxima: 15
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &1238808443
 Rigidbody2D:
   serializedVersion: 4
@@ -1212,7 +1224,13 @@ MonoBehaviour:
   - {x: 11, y: -1.47}
   - {x: 11, y: -2.42}
   - {x: 11, y: -3.4}
-  velocidade: 6
+  velocidadeInicial: 15
+  velocidadeMaxima: 15
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &1260246512
 Rigidbody2D:
   serializedVersion: 4
@@ -1364,7 +1382,13 @@ MonoBehaviour:
   - {x: 11, y: -1.44}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.34}
-  velocidade: 6
+  velocidadeInicial: 15
+  velocidadeMaxima: 15
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &1310382138
 Rigidbody2D:
   serializedVersion: 4

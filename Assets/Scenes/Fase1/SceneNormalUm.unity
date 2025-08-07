@@ -158,12 +158,13 @@ MonoBehaviour:
   - {x: 11, y: -1.44}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 5
-  velocidadeMaxima: 10
+  velocidadeInicial: 9
+  velocidadeMaxima: 9
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!70 &102818577
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -445,12 +446,13 @@ MonoBehaviour:
   - {x: 11, y: -1.63}
   - {x: 11, y: -2.6}
   - {x: 11, y: -3.55}
-  velocidadeInicial: 5
-  velocidadeMaxima: 10
+  velocidadeInicial: 9
+  velocidadeMaxima: 9
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!70 &137295420
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1306,12 +1308,13 @@ MonoBehaviour:
   - {x: 11, y: -1.44}
   - {x: 11, y: -2.38}
   - {x: 11, y: -3.38}
-  velocidadeInicial: 5
-  velocidadeMaxima: 10
+  velocidadeInicial: 9
+  velocidadeMaxima: 9
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!70 &1661726078
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1633,12 +1636,13 @@ MonoBehaviour:
   - {x: 11, y: -1.63}
   - {x: 11, y: -2.6}
   - {x: 11, y: -3.55}
-  velocidadeInicial: 5
-  velocidadeMaxima: 10
+  velocidadeInicial: 9
+  velocidadeMaxima: 9
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
+  posicaoInicial: {fileID: 0}
 --- !u!50 &2129183145
 Rigidbody2D:
   serializedVersion: 4
