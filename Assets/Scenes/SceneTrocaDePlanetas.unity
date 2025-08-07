@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 130566203}
   - component: {fileID: 130566202}
   - component: {fileID: 130566201}
-  - component: {fileID: 130566200}
   - component: {fileID: 130566199}
+  - component: {fileID: 130566204}
   m_Layer: 0
   m_Name: PortalPrincipal
   m_TagString: Untagged
@@ -174,7 +174,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.5906241}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -185,29 +185,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.266667, y: 5.4466667}
+  m_Size: {x: 5.266667, y: 6.627915}
   m_EdgeRadius: 0
---- !u!114 &130566200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130566198}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3721ae677f56df44e81131cedff85731, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameModePainel: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  spritesPortais:
-  - {fileID: 0}
-  - {fileID: 0}
-  whatPhaseIs: 1
-  ErroMassage: {fileID: 1888945384}
-  indexPhase: 3
-  inside: 0
 --- !u!95 &130566201
 Animator:
   serializedVersion: 5
@@ -290,12 +269,25 @@ Transform:
   m_GameObject: {fileID: 130566198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.2, y: 0.86, z: 0}
+  m_LocalPosition: {x: -39.2, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130566204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130566198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deee0f589aaa1ef4c92df1b8ed39d5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexSceneFoLoad: 1
 --- !u!1 &229761443
 GameObject:
   m_ObjectHideFlags: 0
