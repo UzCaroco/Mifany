@@ -52,7 +52,7 @@ public class PlayerNaFaseBoss : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("FaseAtual") == 3)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 }
