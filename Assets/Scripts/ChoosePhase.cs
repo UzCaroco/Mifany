@@ -36,27 +36,48 @@ public class ChoosePhase : MonoBehaviour
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 1)
                     {
                         PlayerPrefs.SetInt("FaseAtual", 1); //3 e 4
-                        //StartCoroutine(InsideThePortal());
-                        
-                        gameModePainel.SetActive(true);
+
+                        if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 1)
+                        {
+                            gameModePainel.SetActive(true);
+                        }
+                        else
+                        {
+                            indexPhase = 3;
+                            startCorou = StartCoroutine(InsideThePortal());
+                        }
                     }
                     break;
                 case 2:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 2)
                     {
                         PlayerPrefs.SetInt("FaseAtual", 2); //5 e 6
-                        //StartCoroutine(InsideThePortal());
                         
-                        gameModePainel.SetActive(true);
+                        if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 2)
+                        {
+                            gameModePainel.SetActive(true);
+                        }
+                        else
+                        {
+                            indexPhase = 5;
+                            startCorou = StartCoroutine(InsideThePortal());
+                        }
                     }
                     break;
                 case 3:
                     if (PlayerPrefs.GetInt("choosePhase", 1) >= 3)
                     {
                         PlayerPrefs.SetInt("FaseAtual", 3); //7 e 8
-                        //StartCoroutine(InsideThePortal());
                         
-                        gameModePainel.SetActive(true);
+                        if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 3)
+                        {
+                            gameModePainel.SetActive(true);
+                        }
+                        else
+                        {
+                            indexPhase = 7;
+                            startCorou = StartCoroutine(InsideThePortal());
+                        }
                     }
                     break;
             }

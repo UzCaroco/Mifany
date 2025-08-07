@@ -19,6 +19,11 @@ public class MenuPrincipalManager : MonoBehaviour
     {
         Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
 
+        if (!PlayerPrefs.HasKey("ConclusaoDaFase"))
+        {
+            PlayerPrefs.SetInt("ConclusaoDaFase", 0);
+        }
+
         if (!PlayerPrefs.HasKey("choosePhase"))
         {
             PlayerPrefs.SetInt("choosePhase", 1);
@@ -28,10 +33,10 @@ public class MenuPrincipalManager : MonoBehaviour
         }
         else
         {
-            if (PlayerPrefs.GetInt("FaseAtual") >= 2)
+            if (PlayerPrefs.GetInt("ConclusaoDaFase") >= 1)
             {
-                faseBtn.interactable = true;
                 resetBtn.interactable = true;
+                faseBtn.interactable = true;
             }
             else
             {
@@ -92,6 +97,8 @@ public class MenuPrincipalManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("choosePhase");
         PlayerPrefs.DeleteKey("FaseAtual");
+        PlayerPrefs.DeleteKey("ConclusaoDaFase");
+
         PlayerPrefs.Save();
 
         resetBtn.interactable = false;
