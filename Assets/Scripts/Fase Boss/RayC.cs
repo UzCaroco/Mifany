@@ -145,7 +145,13 @@ public class RayC : MonoBehaviour
                 scriptAtaqueBoss.Atacar();
 
                 img.sprite = spritesPoder[2];
-                
+
+                if (sliderPlayer.value <= 0)
+                {
+                    Debug.Log("Game Over");
+                    SceneManager.LoadScene(1); // Fase 4
+                }
+
             }
         }
         try
@@ -167,7 +173,11 @@ public class RayC : MonoBehaviour
 
                 img.sprite = spritesPoder[2];
 
-
+                if (sliderPlayer.value <= 0)
+                {
+                    Debug.Log("Game Over");
+                    SceneManager.LoadScene(1); // Fase 4
+                }
             }
         }
         catch
