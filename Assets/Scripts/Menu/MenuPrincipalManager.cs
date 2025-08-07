@@ -24,6 +24,8 @@ public class MenuPrincipalManager : MonoBehaviour
             PlayerPrefs.SetInt("ConclusaoDaFase", 0);
         }
 
+        print(PlayerPrefs.GetInt("ConclusaoDaFase"));
+
         if (!PlayerPrefs.HasKey("choosePhase"))
         {
             PlayerPrefs.SetInt("choosePhase", 1);
