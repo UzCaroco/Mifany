@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeInicial: 0.43
-  velocidadeMaxima: 0.788
+  velocidadeInicial: 0.42
+  velocidadeMaxima: 0.77
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
@@ -1759,8 +1759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeInicial: 0.35
-  velocidadeMaxima: 0.641
+  velocidadeInicial: 0.29
+  velocidadeMaxima: 0.531
   velocidadeAtual: 0
   tempoFinal: 0
   aceleracao: 0
