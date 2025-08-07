@@ -241,7 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.28
+  velocidadeInicial: 2
+  velocidadeMaxima: 9
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 0}
 --- !u!1 &286039665
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,10 +661,6 @@ MonoBehaviour:
   - {fileID: 1260246509}
   - {fileID: 1238808441}
   - {fileID: 1310382136}
-  quads:
-  - {fileID: 277400956}
-  - {fileID: 1723483572}
-  - {fileID: 1414236739}
   materials:
   - {fileID: 2100000, guid: ec5a9ca0f26fd234a94764c1f4f1179f, type: 2}
   - {fileID: 2100000, guid: 5d6aa29aa5ae72e4196cc1f1821aae91, type: 2}
@@ -670,7 +671,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ba4a757deeaf8fc48a35d755ad313c54, type: 2}
   - {fileID: 2100000, guid: 252e454a14884794d90d35f85c191f72, type: 2}
   - {fileID: 2100000, guid: 19ecebc1831b4964fa61aaad31acc7bf, type: 2}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 727431401}
   clip:
   - {fileID: 8300000, guid: b5c6f72ed2776d64cbb93fb136eb8419, type: 3}
   - {fileID: 8300000, guid: b5c6f72ed2776d64cbb93fb136eb8419, type: 3}
@@ -917,7 +918,6 @@ MonoBehaviour:
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!50 &1092994837
 Rigidbody2D:
   serializedVersion: 4
@@ -1022,7 +1022,6 @@ MonoBehaviour:
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!50 &1238808443
 Rigidbody2D:
   serializedVersion: 4
@@ -1230,7 +1229,6 @@ MonoBehaviour:
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!50 &1260246512
 Rigidbody2D:
   serializedVersion: 4
@@ -1388,7 +1386,6 @@ MonoBehaviour:
   tempoFinal: 0
   aceleracao: 0
   audioSource: {fileID: 727431401}
-  posicaoInicial: {fileID: 0}
 --- !u!50 &1310382138
 Rigidbody2D:
   serializedVersion: 4
@@ -1637,7 +1634,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.12
+  velocidadeInicial: 2
+  velocidadeMaxima: 9
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 0}
 --- !u!1 &1723483570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +1759,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3227e54cf1e124c8b42e2485b9c5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0.18
+  velocidadeInicial: 2
+  velocidadeMaxima: 9
+  velocidadeAtual: 0
+  tempoFinal: 0
+  aceleracao: 0
+  audioSource: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
