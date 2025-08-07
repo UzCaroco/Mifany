@@ -12,6 +12,8 @@ public class PortalController : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
+        
         if (PlayerPrefs.GetInt("FaseAtual", 1) >= 3)
         {
             for (int i = 0; i < gameObjMaterialForChange.Length; i++)
