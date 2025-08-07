@@ -37,7 +37,10 @@ public class PortalController : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            if (PlayerPrefs.GetInt("FaseAtual", 1) == 1)
+            if (PlayerPrefs.GetInt("ConclusaoDaFase") == 3)
+                levelDoJogo = 2;
+
+            else if (PlayerPrefs.GetInt("FaseAtual", 1) == 1)
                 levelDoJogo = 3;
 
             else if (PlayerPrefs.GetInt("FaseAtual", 1) == 2)
