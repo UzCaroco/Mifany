@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (!audioSource.isPlaying && tocandoMusica)
+        if (audioSource.time >= audioSource.clip.length - 0.1f && tocandoMusica)
         {
             tocandoMusica = false;
             SceneManager.LoadScene(indexPhase);
