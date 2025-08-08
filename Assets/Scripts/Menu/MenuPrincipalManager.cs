@@ -101,6 +101,9 @@ public class MenuPrincipalManager : MonoBehaviour
         PlayerPrefs.DeleteKey("choosePhase");
         PlayerPrefs.DeleteKey("FaseAtual");
         PlayerPrefs.DeleteKey("ConclusaoDaFase");
+        PlayerPrefs.DeleteKey("InputTutorialCenaPlaneta");
+        PlayerPrefs.DeleteKey("InputTutorialCenaCorrendo");
+        PlayerPrefs.DeleteKey("InputTutorialCenaBoss");
 
         PlayerPrefs.Save();
 
