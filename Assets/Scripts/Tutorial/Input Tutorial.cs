@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +16,7 @@ public class InputTutorial : MonoBehaviour
                 PlayerPrefs.SetInt("InputTutorialCenaPlaneta", 0);
             }
 
-            if (PlayerPrefs.GetInt("InputTutorialCenaPlaneta") == 1) // Se o tutorial já foi concluído
+            if (PlayerPrefs.GetInt("InputTutorialCenaPlaneta") == 1) // Se o tutorial jï¿½ foi concluï¿½do
             {
                 Destroy(gameObject);
             }
@@ -29,7 +28,7 @@ public class InputTutorial : MonoBehaviour
                 PlayerPrefs.SetInt("InputTutorialCenaCorrendo", 0);
             }
 
-            if (PlayerPrefs.GetInt("InputTutorialCenaCorrendo") == 1) // Se o tutorial já foi concluído
+            if (PlayerPrefs.GetInt("InputTutorialCenaCorrendo") == 1) // Se o tutorial jï¿½ foi concluï¿½do
             {
                 Destroy(gameObject);
             }
@@ -41,7 +40,7 @@ public class InputTutorial : MonoBehaviour
                 PlayerPrefs.SetInt("InputTutorialCenaBoss", 0);
             }
 
-            if (PlayerPrefs.GetInt("InputTutorialCenaBoss") == 1) // Se o tutorial já foi concluído
+            if (PlayerPrefs.GetInt("InputTutorialCenaBoss") == 1) // Se o tutorial jï¿½ foi concluï¿½do
             {
                 Destroy(gameObject);
             }
