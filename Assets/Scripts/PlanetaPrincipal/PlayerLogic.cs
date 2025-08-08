@@ -52,7 +52,7 @@ public class PlayerLogic : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved)
             {
-                float deltaX = touch.deltaPosition.x;
+                float deltaX = -touch.deltaPosition.x;
 
                 if (Mathf.Abs(deltaX) > 5f)
                 {
