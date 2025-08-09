@@ -847,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3591611683454747519, guid: 5f3d5d85973aaa54d8177a648bc47b18, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.028747559
+      value: 0.028808594
       objectReference: {fileID: 0}
     - target: {fileID: 3591611683454747519, guid: 5f3d5d85973aaa54d8177a648bc47b18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1653,7 +1653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0.00024414062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679760533
@@ -1741,7 +1741,7 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: ec5a9ca0f26fd234a94764c1f4f1179f, type: 2}
   - {fileID: 2100000, guid: 5d6aa29aa5ae72e4196cc1f1821aae91, type: 2}
-  - {fileID: 2100000, guid: f3aed11806e2002468e8a46fc3cd485f, type: 2}
+  - {fileID: 0}
   - {fileID: 2100000, guid: a7c899146f8932c45ada5dc42be8e176, type: 2}
   - {fileID: 2100000, guid: c2d75edd34132dd40b9fc7ae55838a21, type: 2}
   - {fileID: 2100000, guid: 386478b09abbc73438f6e802fb735d13, type: 2}
@@ -2612,7 +2612,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec5a9ca0f26fd234a94764c1f4f1179f, type: 2}
+  - {fileID: 2100000, guid: 864e9b47d5c7c484e8ea44cac6300b2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3413,7 +3413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.021250002, y: 0.020370372}
   m_AnchorMax: {x: 0.11000001, y: 0.1806667}
-  m_AnchoredPosition: {x: 1.0001221, y: 1}
+  m_AnchoredPosition: {x: 1, y: 1}
   m_SizeDelta: {x: -8.688965, y: -9.2052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1870989069
@@ -3897,7 +3897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2129183142
