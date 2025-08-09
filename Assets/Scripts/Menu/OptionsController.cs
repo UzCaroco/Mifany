@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class OptionsController : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] GameObject btnPause;
     [SerializeField] GameObject PainelOpcoes;
     [SerializeField] GameObject PainelConfiguracao;
 
@@ -14,22 +16,41 @@ public class OptionsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AbrirOpcoes();
-    }
-
-    void AbrirOpcoes()
-    {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab))
         {
-            PainelOpcoes.SetActive(true);
-            Time.timeScale = 0f;
+            AbrirOpcoes();
         }
+    }
+
+    public void AbrirOpcoes()
+    {
+        PainelOpcoes.SetActive(true);
+        Time.timeScale = 0f;
+
+        if (btnPause != null)
+        {
+            btnPause.SetActive(false);
+        }
+        if (audioSource != null)
+        {
+            audioSource.Pause();
+        }
+        
     }
     public void FecharOpcoes()
     {
         PainelOpcoes.SetActive(false);
         PainelConfiguracao.SetActive(false);
         Time.timeScale = 1f;
+
+        if (btnPause != null)
+        {
+            btnPause.SetActive(true);
+        }
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
     }
 
     public void AbrirConfiguracao()
