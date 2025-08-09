@@ -94,6 +94,9 @@ public class OptionsController : MonoBehaviour
     void PausarJogo()
     {
         AbrirOpcoes();
-        musicScript.jogoPausado = true;
+        if (musicScript != null)
+        {
+            musicScript.jogoPausado = true;
+        }
     }
 }
