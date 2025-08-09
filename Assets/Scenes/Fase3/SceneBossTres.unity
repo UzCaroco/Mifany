@@ -2553,6 +2553,7 @@ MonoBehaviour:
   posicaoFinal: 4.01
   tempoDeViagem: 1.2
   prefabNota: {fileID: 8472196396448116554, guid: ce70123b5c30e134c987a516c1bd6af3, type: 3}
+  jogoPausado: 0
 --- !u!4 &1334658008
 Transform:
   m_ObjectHideFlags: 0
@@ -2945,6 +2946,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1334658009}
+    - target: {fileID: 6826369762427064070, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+      propertyPath: musicScript
+      value: 
+      objectReference: {fileID: 1334658007}
     - target: {fileID: 7018855067603410882, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5

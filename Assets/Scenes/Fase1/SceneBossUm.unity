@@ -4010,6 +4010,7 @@ MonoBehaviour:
   posicaoFinal: 4.01
   tempoDeViagem: 2
   prefabNota: {fileID: 8472196396448116554, guid: ce70123b5c30e134c987a516c1bd6af3, type: 3}
+  jogoPausado: 0
 --- !u!4 &1334658008
 Transform:
   m_ObjectHideFlags: 0
@@ -4588,6 +4589,7 @@ MonoBehaviour:
   PainelOpcoes: {fileID: 2004614191}
   PainelConfiguracao: {fileID: 343847499}
   menu: SceneMenu
+  musicScript: {fileID: 1334658007}
 --- !u!4 &1613716378
 Transform:
   m_ObjectHideFlags: 0

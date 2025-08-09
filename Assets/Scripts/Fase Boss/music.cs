@@ -15,7 +15,9 @@ public class music : MonoBehaviour
 
 
     public GameObject prefabNota;
-    
+
+    public bool jogoPausado = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +46,19 @@ public class music : MonoBehaviour
     }
     IEnumerator CarregarNotaMusical(float tempo)
     {
-        yield return new WaitForSeconds(tempo - tempoDeViagem);
+        // Esperar até chegar o momento spawn, mas respeitando o pause
+
+        float tempoRestante = tempo - tempoDeViagem;
+        float tempoPassado = 0f;
+
+        while (tempoPassado < tempoRestante)
+        {
+            if (!jogoPausado)
+            {
+                tempoPassado += Time.unscaledDeltaTime; //tempo real
+            }
+            yield return null; // Espera o próximo frame
+        }
 
         // Calcula velocidade baseada no tempo fixo de viagem
         float distancia = posicaoFinal - posicaoInicial;

@@ -13,6 +13,8 @@ public class OptionsController : MonoBehaviour
 
     [SerializeField] private string menu;
 
+    [SerializeField] music musicScript;
+
     // Update is called once per frame
     void Update()
     {
@@ -51,6 +53,11 @@ public class OptionsController : MonoBehaviour
         {
             audioSource.Play();
         }
+
+        if (musicScript != null)
+        {
+            musicScript.jogoPausado = false;
+        }
     }
 
     public void AbrirConfiguracao()
@@ -87,5 +94,6 @@ public class OptionsController : MonoBehaviour
     void PausarJogo()
     {
         AbrirOpcoes();
+        musicScript.jogoPausado = true;
     }
 }
