@@ -35,7 +35,7 @@ public class OptionsController : MonoBehaviour
         {
             audioSource.Pause();
         }
-        
+
     }
     public void FecharOpcoes()
     {
@@ -66,5 +66,26 @@ public class OptionsController : MonoBehaviour
     public void Menu()
     {
         SceneManager.LoadScene(menu);
+    }
+    
+    void OnApplicationFocus(bool temFoco)
+    {
+        if (!temFoco)
+        {
+            PausarJogo();
+        }
+    }
+
+    void OnApplicationPause(bool pausado)
+    {
+        if (pausado)
+        {
+            PausarJogo();
+        }
+    }
+
+    void PausarJogo()
+    {
+        AbrirOpcoes();
     }
 }

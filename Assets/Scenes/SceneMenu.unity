@@ -3550,6 +3550,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6826369762427064070, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 4077601843980235119}
     - target: {fileID: 6948375610972407937, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -3567,6 +3571,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+--- !u!82 &4077601843980235119 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2408181234500313674, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+  m_PrefabInstance: {fileID: 4077601843980235118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

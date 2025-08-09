@@ -1007,6 +1007,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &900676271 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2408181234500313674, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+  m_PrefabInstance: {fileID: 1239630574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &940207563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,6 +2011,10 @@ PrefabInstance:
       propertyPath: btnPause
       value: 
       objectReference: {fileID: 1024367061}
+    - target: {fileID: 6826369762427064070, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 900676271}
     - target: {fileID: 7018855067603410882, guid: d9f3c7d345bf5c04bb32a5459e42234a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
