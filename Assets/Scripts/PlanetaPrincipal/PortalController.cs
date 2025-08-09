@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,9 +27,9 @@ public class PortalController : MonoBehaviour
                 gameObjMaterialForChange[i].material = CenarioCasasPretoBranco;
             }
         }
-   }
-    
-    
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Fase: " + PlayerPrefs.GetInt("FaseAtual"));
@@ -50,6 +49,36 @@ public class PortalController : MonoBehaviour
                 levelDoJogo = 7;
         }
 
-        SceneManager.LoadScene(levelDoJogo);
+        CarregarCena(levelDoJogo);
+    }
+    
+    public void CarregarCena(int indexScene)
+    {
+        StartCoroutine(CarregarCenaAsync(indexScene));
+    }
+
+    IEnumerator CarregarCenaAsync(int indexScene)
+    {
+        // Começa a carregar a cena
+        AsyncOperation operacao = SceneManager.LoadSceneAsync(indexScene);
+
+        // Evita que a cena troque automaticamente quando terminar
+        operacao.allowSceneActivation = false;
+
+        // Enquanto não carregar tudo
+        while (!operacao.isDone)
+        {
+            // Progresso do carregamento (0 a 0.9 é carregamento, 0.9 a 1 é ativação)
+            float progresso = Mathf.Clamp01(operacao.progress / 0.9f);
+            Debug.Log("Progresso: " + (progresso * 100) + "%");
+
+            // Exemplo: ativa quando terminar
+            if (progresso >= 1f)
+            {
+                operacao.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
     }
 }
