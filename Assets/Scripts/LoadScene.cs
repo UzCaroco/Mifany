@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LoadScene : MonoBehaviour
 {
@@ -26,7 +27,32 @@ public class LoadScene : MonoBehaviour
 
     public void LoadSceneWhat(int indexSceneForLoad)
     {
-        SceneManager.LoadScene(indexSceneForLoad);
+        StartCoroutine(CarregarCenaAsync(indexSceneForLoad));
+    }
+
+    IEnumerator CarregarCenaAsync(int indexScene)
+    {
+        // Começa a carregar a cena
+        AsyncOperation operacao = SceneManager.LoadSceneAsync(indexScene);
+
+        // Evita que a cena troque automaticamente quando terminar
+        operacao.allowSceneActivation = false;
+
+        // Enquanto não carregar tudo
+        while (!operacao.isDone)
+        {
+            // Progresso do carregamento (0 a 0.9 é carregamento, 0.9 a 1 é ativação)
+            float progresso = Mathf.Clamp01(operacao.progress / 0.9f);
+            Debug.Log("Progresso: " + (progresso * 100) + "%");
+
+            // Exemplo: ativa quando terminar
+            if (progresso >= 1f)
+            {
+                operacao.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

@@ -158,7 +158,32 @@ public class ChoosePhase : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(indexPhase);
+        StartCoroutine(CarregarCenaAsync(indexPhase));
+    }
+
+    IEnumerator CarregarCenaAsync(int indexScene)
+    {
+        // Começa a carregar a cena
+        AsyncOperation operacao = SceneManager.LoadSceneAsync(indexScene);
+
+        // Evita que a cena troque automaticamente quando terminar
+        operacao.allowSceneActivation = false;
+
+        // Enquanto não carregar tudo
+        while (!operacao.isDone)
+        {
+            // Progresso do carregamento (0 a 0.9 é carregamento, 0.9 a 1 é ativação)
+            float progresso = Mathf.Clamp01(operacao.progress / 0.9f);
+            Debug.Log("Progresso: " + (progresso * 100) + "%");
+
+            // Exemplo: ativa quando terminar
+            if (progresso >= 1f)
+            {
+                operacao.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
     }
 
     void OpenPortal(int progressaoFase)
